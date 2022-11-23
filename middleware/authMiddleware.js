@@ -5,12 +5,12 @@ const config = require('config')
 
 const authMiddleware = (req, res, next) => {
     // const token = req.cookies.jwt
-    const authHeader = req.headers['authorization']
+    const authHeader = req.headers['Authorization']
     //console.log(authHeader)
 
     const token = authHeader && authHeader.split(' ')[1]
 
-    // console.log(token)
+    console.log(token)
 
     //check if json web token exists and is verified
     if (token) {
