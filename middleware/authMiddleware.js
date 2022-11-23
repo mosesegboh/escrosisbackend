@@ -20,7 +20,7 @@ const authMiddleware = (req, res, next) => {
         jwt.verify(token, config.get('ACCESS_TOKEN_SECRET'), (err, decodedToken) => {
             if(err){
                 console.log(err.message);
-                res.json({msg: 'You need to login to access this page 1-invalid token', data: token})
+                res.json({msg: 'You need to login to access this page -invalid token', data: token})
             }else{
                 //console.log(decodedToken)
                 next();
