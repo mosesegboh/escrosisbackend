@@ -10,6 +10,7 @@ const authMiddleware = (req, res, next) => {
 
     const token = authHeader && authHeader.split(' ')[1]
 
+    console.log(req)
     console.log(token)
 
     //check if json web token exists and is verified
