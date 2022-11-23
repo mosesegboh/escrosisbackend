@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const config = require('config')
 
 const authMiddleware = (req, res, next) => {
-    console.log(req.body)
+    console.log(req.body.token)
     // const token = req.cookies.jwt
     // const authHeader = req.body['authorization']
     //console.log(authHeader)
@@ -13,7 +13,7 @@ const authMiddleware = (req, res, next) => {
     const token = authHeader && authHeader.split(' ')[1]
 
     // console.log(req)
-    // console.log(token)
+    console.log(token)
 
     //check if json web token exists and is verified
     if (token) {
