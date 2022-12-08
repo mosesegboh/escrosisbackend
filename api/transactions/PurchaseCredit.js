@@ -23,10 +23,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
     transactionType = transactionType.trim()
     date = date.trim()
     details = details.trim()
-    if (secondLegTransactionId) {
-        secondLegTransactionId = secondLegTransactionId.trim()
-    }
-    
+    secondLegTransactionId = secondLegTransactionId.trim()
 
     // console.log(email)
     //validation
@@ -74,7 +71,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             status: "FAILED",
             message: "Invalid details"
         })
-    } else if (secondLegTransactionId && !/^[a-zA-Z0-9 ]*$/.test(secondLegTransactionId) && secondLegTransactionId == null) {
+    } else if (!/^[a-zA-Z0-9 ]*$/.test(secondLegTransactionId) && secondLegTransactionId == null) {
         res.json({
             status: "FAILED",
             message: "Invalid second transaction Id"

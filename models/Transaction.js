@@ -9,6 +9,7 @@ const TransactionSchema = new Schema({
     transactionType: String,
     date: Date,
     details: String,
+    balance: Number,
     secondLegTransactionId: {
         type: String,
         required: false,
