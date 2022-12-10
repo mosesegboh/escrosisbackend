@@ -4,8 +4,6 @@ const Transaction = require('./../models/Transaction')
 const authMiddleware = require("../middleware/authMiddleware")
 const authenticateTokenMiddleware = require("../middleware/authenticateTokenMiddleware")
 const emailFunction = require('../services');
-
-//nodemailer for sending emails
 const nodemailer = require('nodemailer')
 
 let transporter = nodemailer.createTransport({
@@ -25,7 +23,6 @@ transporter.verify((error, success) => {
         console.log(success)
     }
 })
-
 
 //sign up
 router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateTokenMiddleware.authenticateTokenMiddleware,  (req, res) => {
@@ -192,7 +189,6 @@ router.get('/get-transactions', authMiddleware.authMiddleware, authenticateToken
     }
 })
 
-
 //get transaction
 router.get('/get-transaction', authMiddleware.authMiddleware, authenticateTokenMiddleware.authenticateTokenMiddleware, (req, res) => {
     
@@ -232,9 +228,5 @@ router.get('/get-transaction', authMiddleware.authMiddleware, authenticateTokenM
         })
     }
 })
-
-
-//send transaction succesful Email
-
 
 module.exports = router

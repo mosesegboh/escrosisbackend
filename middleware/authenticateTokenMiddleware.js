@@ -8,6 +8,8 @@ const authenticateTokenMiddleware = (req,res,next) => {
 
     const token = authHeader && authHeader.split(' ')[1]
 
+    // console.log(token, 'this is the authenticate token')
+
     if(token == null) return res.json({status: 401, msg: 'An error occured in getting your user details - no token'})
 
     jwt.verify(token,  config.get('ACCESS_TOKEN_SECRET'), (err, user) => {

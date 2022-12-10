@@ -4,19 +4,10 @@ const ObjectID = require('mongodb')
 const mongoose = require('mongoose')
 const jwt = require('jsonwebtoken')
 const config = require('config')
-
-//User model
 const User = require('./../models/User')
-//User verification model
 const UserVerification = require('./../models/UserVerification')
-
-//User verification model
 const UserOTPVerification = require('./../models/UserOTPVerification')
-
 const sendVerificationEmail = require('../services/index')
-// const authenticateTokenMiddleware = require("../middleware/authenticateTokenMiddleware")
-
-//email handlers
 const nodemailer = require('nodemailer')
 
 //unique string
