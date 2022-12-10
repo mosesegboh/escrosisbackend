@@ -156,7 +156,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
 })
 
 //sign in
-router.get('/get-transactions', authMiddleware.authMiddleware, authenticateTokenMiddleware.authenticateTokenMiddleware, (req, res) => {
+router.post('/get-transactions', authMiddleware.authMiddleware, authenticateTokenMiddleware.authenticateTokenMiddleware, (req, res) => {
     
     let {email} = req.body
 
