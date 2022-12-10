@@ -96,4 +96,52 @@ let transporter = nodemailer.createTransport({
   
   }
 
-module.exports = {generateAccessToken, sendVerificationEmail}
+  const sendTransactionCompleteEmail = async ({email, transactionId, transactionDate, amount, transactionType, details}, res, status) => {
+      
+      try {
+          if (status == "success"){
+              //mail options
+              var mailOPtions = { 
+                  from : process.env.AUTH_EMAIL,
+                  to: email,
+                  subject: "Your transaction was successful",
+                  html: `<p>Hello</p><p>This is to notify you that your transaction has been completed</p>
+                  <p>Here are the details of you transaction:</p>
+                  <p><b>Transaction ID: ${transactionId}</b></p>
+                  <p><b>Amount: ${amount}</b></p>
+                  <p><b>Transaction Redemption Date: ${transactionType}</b></p>
+                  <p><b> Transaction Leg: ${transactionDate}</b></p>
+                  <p><b> Details: ${details}</b></p>
+                  <p>Thank you for trusting us, your transaction is in safe hands.</p>
+                  <p>Warm Regards</p>`,
+              }
+          }
+  
+          if (status == "failed") {
+              var mailOPtions = { 
+                  from : process.env.AUTH_EMAIL,
+                  to: email,
+                  subject: "Your transaction failed",
+                  html: `<p>Hello</p><p>This is to notify you that your transaction with details below failed</p>
+                  <p>Here are the details of you transaction:</p>
+                  <p><b>Transaction ID: ${transactionId}</b></p>
+                  <p><b>Amount: ${amount}</b></p>
+                  <p><b>Transaction Redemption Date: ${transactionType}</b></p>
+                  <p><b> Transaction Leg: ${transactionDate}</b></p>
+                  <p><b> Details: ${details}</b></p>
+                  <p>You can  </p>
+                  <p>Warm Regards</p>`,
+              }
+          }
+          
+          await transporter.sendMail(mailOPtions)
+  
+      } catch (error) {
+          res.json({
+              status: "FAILED",
+              message: error.message,
+          })
+      }
+  }
+
+module.exports = {generateAccessToken, sendVerificationEmail, sendTransactionCompleteEmail}

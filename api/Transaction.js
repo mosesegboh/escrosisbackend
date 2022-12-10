@@ -1,20 +1,35 @@
 const express = require('express')
 const router = express.Router()
-
-//User model
 const Transaction = require('./../models/Transaction')
 const authMiddleware = require("../middleware/authMiddleware")
 const authenticateTokenMiddleware = require("../middleware/authenticateTokenMiddleware")
+const emailFunction = require('../services');
 
-//password hashing
-// const bcrypt = require('bcrypt')
+//nodemailer for sending emails
+const nodemailer = require('nodemailer')
+
+let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.AUTH_EMAIL,
+        pass: process.env.AUTH_PASSWORD,
+    }
+})
+
+// //testing the transporter successfully
+transporter.verify((error, success) => {
+    if(error) {
+        console.log(error)
+    }else{
+        console.log('ready for messages')
+        console.log(success)
+    }
+})
+
 
 //sign up
 router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateTokenMiddleware.authenticateTokenMiddleware,  (req, res) => {
     let {email, transactionId, transactionDate, amount, transactionType, date, details, secondLegTransactionId} = req.body
-
-
-    // console.log(email);
 
     email = email.trim()
     transactionDate = transactionDate.trim()
@@ -27,8 +42,6 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
         secondLegTransactionId = secondLegTransactionId.trim()
     }
     
-
-    // console.log(email)
     //validation
     if (email == "" || transactionDate == "", transactionId == "" || amount == "" || transactionType == "" || date=="" || details == ""){
         res.json({
@@ -110,16 +123,23 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                     })
 
                     newTransaction.save().then(result => {
+                        const status = "success"
+                        emailFunction.sendTransactionCompleteEmail(result, res, status)
                         res.json({
                             status: "SUCCESS",
                             message: "Transaction saved successfully",
                             data: result
                         })
+
+                        //we can send an email for a succesful transaction
+                        
+
                     }).catch(err => {
                         res.json({
                             status: "FAILED",
                             message: "An error occured while saving transaction"
                         })
+                        // sendTransactionCompleteEmail(result, res, 'failed')
                     })
                 // }).catch(err => {
                 //     res.json({
@@ -212,5 +232,9 @@ router.get('/get-transaction', authMiddleware.authMiddleware, authenticateTokenM
         })
     }
 })
+
+
+//send transaction succesful Email
+
 
 module.exports = router
