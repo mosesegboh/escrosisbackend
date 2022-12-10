@@ -3,8 +3,9 @@ const config = require('config')
 
 const authenticateTokenMiddleware = (req,res,next) => {
     if(req.params) {
-        const authHeader = req.body.token
-        console.log(authHeader), 'this is authheader'
+        console.log(req.params)
+        const authHeader = req.params.token
+        console.log(authHeader, 'authenticate token middleware')
     }
 
     // const authHeader = req.headers['authorization']

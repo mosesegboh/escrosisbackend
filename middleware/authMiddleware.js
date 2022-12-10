@@ -5,9 +5,10 @@ const config = require('config')
 
 const authMiddleware = (req, res, next) => {
     // console.log(req.body.token)
-    if(req.params) {
-        const authHeader = req.body.token
-        console.log(authHeader), 'this is authmiddleware'
+    if (req.params) {
+        console.log(req.params, 'this is req params')
+        const authHeader = req.params.token
+        console.log(authHeader)
     }
     // const token = req.cookies.jwt
     // const authHeader = req.body['authorization']
