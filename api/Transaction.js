@@ -4,29 +4,19 @@ const Transaction = require('./../models/Transaction')
 const authMiddleware = require("../middleware/authMiddleware")
 const authenticateTokenMiddleware = require("../middleware/authenticateTokenMiddleware")
 const emailFunction = require('../services');
+const updateCustomerLockedBalance = require('../functions/transactions/Transactions')
 const nodemailer = require('nodemailer')
 
-let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: process.env.AUTH_EMAIL,
-        pass: process.env.AUTH_PASSWORD,
-    }
-})
-
-// //testing the transporter successfully
-transporter.verify((error, success) => {
-    if(error) {
-        console.log(error)
-    }else{
-        console.log('ready for messages')
-        console.log(success)
-    }
-})
-
 //sign up
-router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateTokenMiddleware.authenticateTokenMiddleware,  (req, res) => {
-    let {email, transactionId, transactionDate, amount, transactionType, date, details, secondLegTransactionId} = req.body
+router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateTokenMiddleware.authenticateTokenMiddleware, async  (req, res) => {
+    let {email, transactionId, transactionDate, amount, transactionType, date, details, secondLegTransactionId, lockedTransaction, unLockedTransaction, status} = req.body
+
+    if (email == null || transactionDate == null, transactionId == null || amount == null || transactionType == null || date==null || details == null){
+        res.json({
+            status: "FAILED",
+            message: "Empty input fields"
+        })
+    }
 
     email = email.trim()
     transactionDate = transactionDate.trim()
@@ -38,27 +28,28 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
     if (secondLegTransactionId) {
         secondLegTransactionId = secondLegTransactionId.trim()
     }
+    if (lockedTransaction) {
+        lockedTransaction = lockedTransaction.trim()
+    }
+    if (unLockedTransaction) {
+        unLockedTransaction = unLockedTransaction.trim()
+    }
+    if (status) {
+        status = status.trim()
+    }
     
     //validation
-    if (email == "" || transactionDate == "", transactionId == "" || amount == "" || transactionType == "" || date=="" || details == ""){
-        res.json({
-            status: "FAILED",
-            message: "Empty input fields"
-        })
-    }else if (!new Date(transactionDate).getTime()) {
+    if (!new Date(transactionDate).getTime()) {
         res.json({
             status: "FAILED",
             message: "Invalid transaction date entered"
         })
-    }
-    
-    // else if (/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
-    //     res.json({
-    //         status: "FAILED",
-    //         message: "Invalid email"
-    //     })
-    // } 
-    else if (!/^[a-zA-Z0-9 ]*$/.test(transactionId)) {
+    } else if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w {2, 3})+$/.test(email)) {
+        res.json({
+            status: "FAILED",
+            message: "Invalid email"
+        })
+    } else if (!/^[a-zA-Z0-9 ]*$/.test(transactionId)) {
         res.json({
             status: "FAILED",
             message: "Invalid transactionId"
@@ -68,7 +59,6 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             status: "FAILED",
             message: "Invalid Amount"
         })
-    // } else if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(transactionType)) {
     } else if (!/^[a-zA-Z ]*$/.test(transactionType)) {
         res.json({
             status: "FAILED",
@@ -90,24 +80,77 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             message: "Invalid second transaction Id"
         })
     } else {
-        // console.log(email)
+        //get the latest balance for this particular user
+        const newLockedTransactionBalanceValue = await Transaction.find({}).sort({_id: -1}).limit(1)
+        .then((transaction)=>{
+            const currentlockedTransactionBalance = transaction[0].lockedTransaction ? transaction[0].lockedTransaction : 0.00
+            const currentUnlockedTransactionBalance = transaction[0].unLockedTransaction ?  transaction[0].unLockedTransaction : 0.00
+            const currentBalance = transaction[0].balance ? transaction[0].balance : 0.00
+            return [currentlockedTransactionBalance, currentUnlockedTransactionBalance, currentBalance]
+        })
+
+        if (transactionType == "Secondleg"){
+            var transactionToUpdate = await Transaction.find({"Transaction.transactionId": secondLegTransactionId})
+            .then((result) => { 
+                const newTransactionToUpdate = result[0] ? result[0]  : 0.00
+                return newTransactionToUpdate
+            })
+        }
+
+        if(transactionToUpdate.status == "open") {
+            return res.json({
+                status: "FAILED",
+                message: "the transactionh has already being locked"
+            })
+        }
+        // console.log(newLockedTransactionBalanceValue[1])
+        // return res.json({
+        //     status: "FAILED",
+        //     message: "debug error"
+        // })
         //if validation passed proceed by checking if the user already exist in the database
         Transaction.find({ transactionId }).then(result => {
             if(result.length){
-                res.json({
-                    status: "FAILED",
-                    message: "Transaction Already exists in the database"
-                })
+                    res.json({
+                        status: "FAILED",
+                        message: "Transaction Already exists in the database"
+                    })
             }else{
+                if (transactionType == "Firstleg"){
+                    unLockedTransaction = updateCustomerLockedBalance.updateCustomerLockedBalance(newLockedTransactionBalanceValue[1], amount)
+                    lockedTransaction = newLockedTransactionBalanceValue[0]
+                    status = 'open'
+                }
 
-                
-                //create the user
-
-                //password handling
-                // const saltRounds = 10
-                // bcrypt.hash(password, saltRounds).then(hashedPassword => {
-                    //if password is hashed successfully
-                    // console.log(email)
+                if (transactionType == "Secondleg"){
+                    const filter = { transactionId: secondLegTransactionId };
+                    const update = { 
+                                    status: 'locked',
+                                    lockedTransaction: +amount + +transactionToUpdate.lockedTransaction,
+                                    unLockedTransaction: +transactionToUpdate.unLockedTransaction - +amount
+                                };
+                    //update the transaction and exit
+                    Transaction.findOneAndUpdate(filter, update).then(result => {
+                        if(result){
+                            const status = "success"
+                            //send email
+                            emailFunction.sendTransactionLockedEmail(result, res, status)
+                            //return response
+                            res.json({
+                                status: "SUCCESS",
+                                message: "The transaction has been locked successfully"
+                            })
+                        }
+                    }).catch(err => {
+                        console.log(err)
+                        res.json({
+                            status: "FAILED",
+                            message: "An error occured, while locking the transaction"
+                        })
+                    })
+                }else{
+                    balance = newLockedTransactionBalanceValue[2]
+               
                     const newTransaction = new Transaction({
                         email,
                         transactionDate,
@@ -116,7 +159,11 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                         transactionType,
                         date,
                         details,
-                        secondLegTransactionId
+                        status,
+                        secondLegTransactionId,
+                        lockedTransaction,
+                        unLockedTransaction,
+                        balance
                     })
 
                     newTransaction.save().then(result => {
@@ -127,23 +174,14 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                             message: "Transaction saved successfully",
                             data: result
                         })
-
-                        //we can send an email for a succesful transaction
-                        
-
                     }).catch(err => {
+                        emailFunction.sendTransactionCompleteEmail(result, res, 'failed')
                         res.json({
                             status: "FAILED",
                             message: "An error occured while saving transaction"
                         })
-                        // sendTransactionCompleteEmail(result, res, 'failed')
                     })
-                // }).catch(err => {
-                //     res.json({
-                //         status: "FAILED",
-                //         message: "AN error occured during password hashing"
-                //     })
-                // })
+                }
             }
         }).catch(err => {
             console.log(err)
