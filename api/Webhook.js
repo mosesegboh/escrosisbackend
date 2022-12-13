@@ -16,3 +16,5 @@ router.post('/feedback', (req, res) => {
    console.log('i was hit o', 'this is a text')
    console.log(req.body, 'this is the request body')
 })
+
+module.exports = router
