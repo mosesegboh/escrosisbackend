@@ -120,6 +120,42 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                     unLockedTransaction = updateCustomerLockedBalance.updateCustomerLockedBalance(newLockedTransactionBalanceValue[1], amount)
                     lockedTransaction = newLockedTransactionBalanceValue[0]
                     status = 'open'
+
+                    console.log(lockedTransaction, unLockedTransaction, 'this is the locked and unlocked transaction')
+                    balance = newLockedTransactionBalanceValue[2]
+
+                    const filter = { transactionId:  transactionId};
+                    const update = { 
+                        lockedTransaction: lockedTransaction,
+                        unLockedTransaction: unLockedTransaction,
+                        transactionDate: transactionDate,
+                        transactionType: transactionType,
+                        details: details,
+                        secondLegTransactionId: secondLegTransactionId,
+                        balance
+                    };
+
+                    Transaction.findOneAndUpdate(filter, update).then(result => {
+                        console.log(result, 'this is the found result')
+                        if(result){
+                            const status = "success"
+                            //send email
+                            emailFunction.sendTransactionLockedEmail(result, res, status)
+                            //return response
+                            res.json({
+                                status: "SUCCESS",
+                                message: "The transaction has been saved successfully"
+                            })
+                        }
+                    }).catch(err => {
+                        const status = "failed"
+                        emailFunction.sendTransactionCompleteEmail(result, res, 'failed')
+                        console.log(err)
+                        res.json({
+                            status: "FAILED",
+                            message: "An error occured, while completing the transaction"
+                        })
+                    })
                 }
 
                 if (transactionType == "Secondleg"){
@@ -148,74 +184,77 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                             message: "An error occured, while locking the transaction"
                         })
                     })
-                }else{
-                    //i need to make an update here
-                    balance = newLockedTransactionBalanceValue[2]
-
-                    const filter = { transactionId:  transactionId};
-                    const update = { 
-                        lockedTransaction: lockedTransaction,
-                        unLockedTransaction: unLockedTransaction,
-                        transactionDate: transactionDate,
-                        transactionType: transactionType,
-                        details: details,
-                        secondLegTransactionId: secondLegTransactionId,
-                        balance
-                    };
-
-                    Transaction.findOneAndUpdate(filter, update).then(result => {
-                        if(result){
-                            const status = "success"
-                            //send email
-                            emailFunction.sendTransactionLockedEmail(result, res, status)
-                            //return response
-                            res.json({
-                                status: "SUCCESS",
-                                message: "The transaction has been saved successfully"
-                            })
-                        }
-                    }).catch(err => {
-                        const status = "failed"
-                        emailFunction.sendTransactionCompleteEmail(result, res, 'failed')
-                        console.log(err)
-                        res.json({
-                            status: "FAILED",
-                            message: "An error occured, while locking the transaction"
-                        })
-                    })
-                    // balance = newLockedTransactionBalanceValue[2]
-               
-                    // const newTransaction = new Transaction({
-                    //     email,
-                    //     transactionDate,
-                    //     transactionId,
-                    //     amount,
-                    //     transactionType,
-                    //     date,
-                    //     details,
-                    //     status,
-                    //     secondLegTransactionId,
-                    //     lockedTransaction,
-                    //     unLockedTransaction,
-                    //     balance
-                    // })
-
-                    // newTransaction.save().then(result => {
-                    //     const status = "success"
-                    //     emailFunction.sendTransactionCompleteEmail(result, res, status)
-                    //     res.json({
-                    //         status: "SUCCESS",
-                    //         message: "Transaction saved successfully",
-                    //         data: result
-                    //     })
-                    // }).catch(err => {
-                    //     emailFunction.sendTransactionCompleteEmail(result, res, 'failed')
-                    //     res.json({
-                    //         status: "FAILED",
-                    //         message: "An error occured while saving transaction"
-                    //     })
-                    // })
                 }
+                
+                // else{
+                //     //i need to make an update here
+                //     balance = newLockedTransactionBalanceValue[2]
+
+                //     const filter = { transactionId:  transactionId};
+                //     const update = { 
+                //         lockedTransaction: lockedTransaction,
+                //         unLockedTransaction: unLockedTransaction,
+                //         transactionDate: transactionDate,
+                //         transactionType: transactionType,
+                //         details: details,
+                //         secondLegTransactionId: secondLegTransactionId,
+                //         balance
+                //     };
+
+                //     Transaction.findOneAndUpdate(filter, update).then(result => {
+                //         console.log()
+                //         if(result){
+                //             const status = "success"
+                //             //send email
+                //             emailFunction.sendTransactionLockedEmail(result, res, status)
+                //             //return response
+                //             res.json({
+                //                 status: "SUCCESS",
+                //                 message: "The transaction has been saved successfully"
+                //             })
+                //         }
+                //     }).catch(err => {
+                //         const status = "failed"
+                //         emailFunction.sendTransactionCompleteEmail(result, res, 'failed')
+                //         console.log(err)
+                //         res.json({
+                //             status: "FAILED",
+                //             message: "An error occured, while completing the transaction"
+                //         })
+                //     })
+                //     // balance = newLockedTransactionBalanceValue[2]
+               
+                //     // const newTransaction = new Transaction({
+                //     //     email,
+                //     //     transactionDate,
+                //     //     transactionId,
+                //     //     amount,
+                //     //     transactionType,
+                //     //     date,
+                //     //     details,
+                //     //     status,
+                //     //     secondLegTransactionId,
+                //     //     lockedTransaction,
+                //     //     unLockedTransaction,
+                //     //     balance
+                //     // })
+
+                //     // newTransaction.save().then(result => {
+                //     //     const status = "success"
+                //     //     emailFunction.sendTransactionCompleteEmail(result, res, status)
+                //     //     res.json({
+                //     //         status: "SUCCESS",
+                //     //         message: "Transaction saved successfully",
+                //     //         data: result
+                //     //     })
+                //     // }).catch(err => {
+                //     //     emailFunction.sendTransactionCompleteEmail(result, res, 'failed')
+                //     //     res.json({
+                //     //         status: "FAILED",
+                //     //         message: "An error occured while saving transaction"
+                //     //     })
+                //     // })
+                // }
             }
         }).catch(err => {
             console.log(err)
