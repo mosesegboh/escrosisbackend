@@ -97,10 +97,10 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             })
         }
 
-        if(transactionType == "Secondleg" && transactionToUpdate.status == "open") {
+        if(transactionType == "Secondleg" && transactionToUpdate.status == "locked") {
             return res.json({
                 status: "FAILED",
-                message: "the transactionh has already being locked"
+                message: "the transaction has already being locked"
             })
         }
         // console.log(newLockedTransactionBalanceValue[1])
@@ -111,11 +111,11 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
         //if validation passed proceed by checking if the user already exist in the database
         Transaction.find({ transactionId }).then(result => {
             if(result.length){
-                    res.json({
-                        status: "FAILED",
-                        message: "Transaction Already exists in the database"
-                    })
-            }else{
+                    // res.json({
+                    //     status: "FAILED",
+                    //     message: "Transaction Already exists in the database"
+                    // })
+                // }else{
                 if (transactionType == "Firstleg"){
                     unLockedTransaction = updateCustomerLockedBalance.updateCustomerLockedBalance(newLockedTransactionBalanceValue[1], amount)
                     lockedTransaction = newLockedTransactionBalanceValue[0]
@@ -150,25 +150,39 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                     })
                 }else{
                     //i need to make an update here
-                    // const filter = { transactionId:  transactionId};
-                    Transaction.find({ transactionId }).then(result => {
-                        res.json({
-                            status: "SUCCESS",
-                            message: "we found a transaction"
-                        })
+                    balance = newLockedTransactionBalanceValue[2]
+
+                    const filter = { transactionId:  transactionId};
+                    const update = { 
+                        lockedTransaction: lockedTransaction,
+                        unLockedTransaction: unLockedTransaction,
+                        transactionDate: transactionDate,
+                        transactionType: transactionType,
+                        details: details,
+                        secondLegTransactionId: secondLegTransactionId,
+                        balance
+                    };
+
+                    Transaction.findOneAndUpdate(filter, update).then(result => {
+                        if(result){
+                            const status = "success"
+                            //send email
+                            emailFunction.sendTransactionLockedEmail(result, res, status)
+                            //return response
+                            res.json({
+                                status: "SUCCESS",
+                                message: "The transaction has been saved successfully"
+                            })
+                        }
                     }).catch(err => {
+                        const status = "failed"
+                        emailFunction.sendTransactionCompleteEmail(result, res, 'failed')
+                        console.log(err)
                         res.json({
                             status: "FAILED",
-                            message: "transaction failed!!!"
+                            message: "An error occured, while locking the transaction"
                         })
                     })
-                    
-                    // const update = { 
-                    //                 status: 'locked',
-                    //                 lockedTransaction: +amount + +transactionToUpdate.lockedTransaction,
-                    //                 unLockedTransaction: +transactionToUpdate.unLockedTransaction - +amount
-                    //             };
-
                     // balance = newLockedTransactionBalanceValue[2]
                
                     // const newTransaction = new Transaction({
@@ -207,7 +221,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             console.log(err)
             res.json({
                 status: "FAILED",
-                message: "AN error occured"
+                message: "An error occured"
             })
         })
     }
