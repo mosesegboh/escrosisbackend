@@ -9,6 +9,10 @@ const nodemailer = require('nodemailer')
 
 //sign up
 router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateTokenMiddleware.authenticateTokenMiddleware, async  (req, res) => {
+    res.json({
+        status: "SUCCESS",
+        message: "It was added successfully"
+    })
     let {email, transactionId, transactionDate, amount, transactionType, date, details, secondLegTransactionId, lockedTransaction, unLockedTransaction, status} = req.body
 
     if (email == null || transactionDate == null, transactionId == null || amount == null || transactionType == null || date==null || details == null){
