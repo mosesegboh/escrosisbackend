@@ -80,12 +80,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             status: "FAILED",
             message: "Invalid second transaction Id"
         })
-    } else {
-        res.json({
-            status: "SUCCESS",
-            message: "It was added successfully"
-        })
-        //get the latest balance for this particular user
+    } else {    //get the latest balance for this particular user
         const newLockedTransactionBalanceValue = await Transaction.find({}).sort({_id: -1}).limit(1)
         .then((transaction)=>{
             const currentlockedTransactionBalance = transaction[0].lockedTransaction ? transaction[0].lockedTransaction : 0.00
