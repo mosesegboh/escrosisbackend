@@ -97,7 +97,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             })
         }
 
-        if(transactionToUpdate.status == "open") {
+        if(transactionType == "Secondleg" && transactionToUpdate.status == "open") {
             return res.json({
                 status: "FAILED",
                 message: "the transactionh has already being locked"
@@ -149,38 +149,58 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                         })
                     })
                 }else{
-                    balance = newLockedTransactionBalanceValue[2]
-               
-                    const newTransaction = new Transaction({
-                        email,
-                        transactionDate,
-                        transactionId,
-                        amount,
-                        transactionType,
-                        date,
-                        details,
-                        status,
-                        secondLegTransactionId,
-                        lockedTransaction,
-                        unLockedTransaction,
-                        balance
-                    })
-
-                    newTransaction.save().then(result => {
-                        const status = "success"
-                        emailFunction.sendTransactionCompleteEmail(result, res, status)
+                    //i need to make an update here
+                    // const filter = { transactionId:  transactionId};
+                    Transaction.find({ transactionId }).then(result => {
                         res.json({
                             status: "SUCCESS",
-                            message: "Transaction saved successfully",
-                            data: result
+                            message: "we found a transaction"
                         })
                     }).catch(err => {
-                        emailFunction.sendTransactionCompleteEmail(result, res, 'failed')
                         res.json({
                             status: "FAILED",
-                            message: "An error occured while saving transaction"
+                            message: "transaction failed!!!"
                         })
                     })
+                    
+                    // const update = { 
+                    //                 status: 'locked',
+                    //                 lockedTransaction: +amount + +transactionToUpdate.lockedTransaction,
+                    //                 unLockedTransaction: +transactionToUpdate.unLockedTransaction - +amount
+                    //             };
+
+                    // balance = newLockedTransactionBalanceValue[2]
+               
+                    // const newTransaction = new Transaction({
+                    //     email,
+                    //     transactionDate,
+                    //     transactionId,
+                    //     amount,
+                    //     transactionType,
+                    //     date,
+                    //     details,
+                    //     status,
+                    //     secondLegTransactionId,
+                    //     lockedTransaction,
+                    //     unLockedTransaction,
+                    //     balance
+                    // })
+
+                    // newTransaction.save().then(result => {
+                    //     const status = "success"
+                    //     emailFunction.sendTransactionCompleteEmail(result, res, status)
+                    //     res.json({
+                    //         status: "SUCCESS",
+                    //         message: "Transaction saved successfully",
+                    //         data: result
+                    //     })
+                    // }).catch(err => {
+                    //     emailFunction.sendTransactionCompleteEmail(result, res, 'failed')
+                    //     res.json({
+                    //         status: "FAILED",
+                    //         message: "An error occured while saving transaction"
+                    //     })
+                    // })
                 }
             }
         }).catch(err => {

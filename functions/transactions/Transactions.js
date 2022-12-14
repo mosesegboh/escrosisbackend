@@ -5,6 +5,10 @@ const updateCustomerLockedBalance = ( balance, amount) => {
   return +balance + +amount; 
 }
 
+const revertCustomerLockedBalance = ( balance, amount) => {
+  return +balance - +amount; 
+}
+
 const redeemTransaciton = async (transactionId, dateToredeem ) => {
     let todaysDate = new Date()
 
