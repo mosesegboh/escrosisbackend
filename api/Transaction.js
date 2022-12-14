@@ -122,7 +122,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                     status = 'open'
 
                     console.log(lockedTransaction, unLockedTransaction, 'this is the locked and unlocked transaction')
-                    balance = newLockedTransactionBalanceValue[2]
+                    const balance = newLockedTransactionBalanceValue[2]
 
                     const filter = { transactionId:  transactionId};
                     const update = { 
@@ -130,17 +130,20 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                         unLockedTransaction: unLockedTransaction,
                         transactionDate: transactionDate,
                         transactionType: transactionType,
+                        transactionLeg: transactionType,
                         details: details,
-                        secondLegTransactionId: secondLegTransactionId,
-                        balance
+                        // secondLegTransactionId: secondLegTransactionId,
+                        balance: balance
                     };
 
-                    Transaction.findOneAndUpdate(filter, update).then(result => {
+                    Transaction.findOneAndUpdate(filter, update, {
+                        new: true
+                      }).then(result => {
                         console.log(result, 'this is the found result')
                         if(result){
                             const status = "success"
                             //send email
-                            emailFunction.sendTransactionLockedEmail(result, res, status)
+                            emailFunction.sendTransactionCompleteEmail(result, res, status)
                             //return response
                             res.json({
                                 status: "SUCCESS",
@@ -180,7 +183,8 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                     const update = { 
                                     status: 'locked',
                                     lockedTransaction: +amount + +transactionToUpdate.lockedTransaction,
-                                    unLockedTransaction: +transactionToUpdate.unLockedTransaction - +amount
+                                    unLockedTransaction: +transactionToUpdate.unLockedTransaction - +amount,
+                                    secondLegTransactionId: secondLegTransactionId
                                 };
                     //update the transaction and exit
                     Transaction.findOneAndUpdate(filter, update).then(result => {
@@ -195,6 +199,9 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                             })
                         }
                     }).catch(err => {
+                        const status = "failed"
+                            //send email
+                            emailFunction.sendTransactionLockedEmail(result, res, status)
                         console.log(err)
                         res.json({
                             status: "FAILED",
