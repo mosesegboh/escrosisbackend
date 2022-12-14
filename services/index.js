@@ -122,13 +122,6 @@ let transporter = nodemailer.createTransport({
                   to: email,
                   subject: "Your transaction failed",
                   html: `<p>Hello</p><p>This is to notify you that your transaction with details below failed</p>
-                  <p>Here are the details of you transaction:</p>
-                  <p><b>Transaction ID: ${transactionId}</b></p>
-                  <p><b>Amount: ${amount}</b></p>
-                  <p><b>Transaction Redemption Date: ${transactionType}</b></p>
-                  <p><b> Transaction Leg: ${transactionDate}</b></p>
-                  <p><b> Details: ${details}</b></p>
-                  <p>You can  </p>
                   <p>Warm Regards</p>`,
               }
           }
@@ -171,14 +164,6 @@ let transporter = nodemailer.createTransport({
                   to: email,
                   subject: "Your transaction failed",
                   html: `<p>Hello</p><p>This is to notify you that your transaction with details below failed</p>
-                  <p>Here are the details of you transaction:</p>
-                  <p><b>Transaction ID: ${transactionId}</b></p>
-                  <p><b>Amount: ${amount}</b></p>
-                  <p><b> Second Leg Transaction Id: ${secondLegTransactionId}</b></p>
-                  <p><b>Transaction Redemption Date: ${transactionType}</b></p>
-                  <p><b> Transaction Leg: ${transactionDate}</b></p>
-                  <p><b> Details: ${details}</b></p>
-                  <p>You can  </p>
                   <p>Warm Regards</p>`,
               }
           }
@@ -195,4 +180,4 @@ let transporter = nodemailer.createTransport({
 
  
 
-module.exports = {generateAccessToken, sendVerificationEmail, sendTransactionCompleteEmail}
+module.exports = {generateAccessToken, sendVerificationEmail, sendTransactionCompleteEmail, sendTransactionLockedEmail}
