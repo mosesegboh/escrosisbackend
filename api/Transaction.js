@@ -138,9 +138,9 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                     Transaction.findOneAndUpdate(filter, update).then(result => {
                         console.log(result, 'this is the found result')
                         if(result){
-                            const status = "success"
+                            // const status = "success"
                             //send email
-                            emailFunction.sendTransactionLockedEmail(result, res, status)
+                            // emailFunction.sendTransactionLockedEmail(result, res, status)
                             //return response
                             res.json({
                                 status: "SUCCESS",
@@ -168,9 +168,9 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                     //update the transaction and exit
                     Transaction.findOneAndUpdate(filter, update).then(result => {
                         if(result){
-                            const status = "success"
+                            // const status = "success"
                             //send email
-                            emailFunction.sendTransactionLockedEmail(result, res, status)
+                            // emailFunction.sendTransactionLockedEmail(result, res, status)
                             //return response
                             res.json({
                                 status: "SUCCESS",
