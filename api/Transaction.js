@@ -9,10 +9,7 @@ const nodemailer = require('nodemailer')
 
 //sign up
 router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateTokenMiddleware.authenticateTokenMiddleware, async  (req, res) => {
-    res.json({
-        status: "SUCCESS",
-        message: "It was added successfully"
-    })
+    
     let {email, transactionId, transactionDate, amount, transactionType, date, details, secondLegTransactionId, lockedTransaction, unLockedTransaction, status} = req.body
 
     if (email == null || transactionDate == null, transactionId == null || amount == null || transactionType == null || date==null || details == null){
@@ -84,6 +81,10 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             message: "Invalid second transaction Id"
         })
     } else {
+        res.json({
+            status: "SUCCESS",
+            message: "It was added successfully"
+        })
         //get the latest balance for this particular user
         const newLockedTransactionBalanceValue = await Transaction.find({}).sort({_id: -1}).limit(1)
         .then((transaction)=>{
@@ -120,7 +121,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                     //     message: "Transaction Already exists in the database"
                     // })
                 // }else{
-                if (transactionType == "Firstleg"){
+                if (transactionType == "FirstLeg"){
                     unLockedTransaction = updateCustomerLockedBalance.updateCustomerLockedBalance(newLockedTransactionBalanceValue[1], amount)
                     lockedTransaction = newLockedTransactionBalanceValue[0]
                     status = 'open'
@@ -162,7 +163,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                     })
                 }
 
-                if (transactionType == "Secondleg"){
+                if (transactionType == "SecondLeg"){
 
                     var transactionToUpdate = await Transaction.find({"Transaction.transactionId": secondLegTransactionId})
                     .then((result) => { 
