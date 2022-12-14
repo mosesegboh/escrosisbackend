@@ -89,28 +89,28 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             return [currentlockedTransactionBalance, currentUnlockedTransactionBalance, currentBalance]
         })
 
-        if (transactionType == "Secondleg"){
-            var transactionToUpdate = await Transaction.find({"Transaction.transactionId": secondLegTransactionId})
-            .then((result) => { 
-                const newTransactionToUpdate = result[0] ? result[0]  : 0.00
-                return newTransactionToUpdate
-            })
-        }
+        // if (transactionType == "Secondleg"){
+        //     var transactionToUpdate = await Transaction.find({"Transaction.transactionId": secondLegTransactionId})
+        //     .then((result) => { 
+        //         const newTransactionToUpdate = result[0] ? result[0]  : 0.00
+        //         return newTransactionToUpdate
+        //     })
+        // }
 
-        if(transactionType == "Secondleg" && transactionToUpdate.status == "locked") {
-            return res.json({
-                status: "FAILED",
-                message: "the transaction has already being locked"
-            })
-        }
+        // if(transactionType == "Secondleg" && transactionToUpdate.status == "locked") {
+        //     return res.json({
+        //         status: "FAILED",
+        //         message: "the transaction has already being locked"
+        //     })
+        // }
         // console.log(newLockedTransactionBalanceValue[1])
         // return res.json({
         //     status: "FAILED",
         //     message: "debug error"
         // })
         //if validation passed proceed by checking if the user already exist in the database
-        Transaction.find({ transactionId }).then(result => {
-            if(result.length){
+        // Transaction.find({ transactionId }).then(result => {
+            // if(result.length){
                     // res.json({
                     //     status: "FAILED",
                     //     message: "Transaction Already exists in the database"
@@ -138,9 +138,9 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                     Transaction.findOneAndUpdate(filter, update).then(result => {
                         console.log(result, 'this is the found result')
                         if(result){
-                            // const status = "success"
+                            const status = "success"
                             //send email
-                            // emailFunction.sendTransactionLockedEmail(result, res, status)
+                            emailFunction.sendTransactionLockedEmail(result, res, status)
                             //return response
                             res.json({
                                 status: "SUCCESS",
@@ -159,6 +159,23 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                 }
 
                 if (transactionType == "Secondleg"){
+
+                    var transactionToUpdate = await Transaction.find({"Transaction.transactionId": secondLegTransactionId})
+                    .then((result) => { 
+                        const newTransactionToUpdate = result[0] ? result[0]  : 0.00
+                        return newTransactionToUpdate
+                    }).catch((err) => {
+                        console.log(err)
+                    })
+
+                    if( transactionToUpdate.status == "locked") {
+                        return res.json({
+                            status: "FAILED",
+                            message: "the transaction has already being locked"
+                        })
+                    }
+
+
                     const filter = { transactionId: secondLegTransactionId };
                     const update = { 
                                     status: 'locked',
@@ -168,9 +185,9 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                     //update the transaction and exit
                     Transaction.findOneAndUpdate(filter, update).then(result => {
                         if(result){
-                            // const status = "success"
+                            const status = "success"
                             //send email
-                            // emailFunction.sendTransactionLockedEmail(result, res, status)
+                            emailFunction.sendTransactionLockedEmail(result, res, status)
                             //return response
                             res.json({
                                 status: "SUCCESS",
@@ -255,14 +272,14 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                 //     //     })
                 //     // })
                 // }
-            }
-        }).catch(err => {
-            console.log(err)
-            res.json({
-                status: "FAILED",
-                message: "An error occured"
-            })
-        })
+            // }
+        // }).catch(err => {
+        //     console.log(err)
+        //     res.json({
+        //         status: "FAILED",
+        //         message: "An error occured"
+        //     })
+        // })
     }
 })
 
