@@ -23,6 +23,10 @@ const TransactionSchema = new Schema({
     secondLegTransactionId: {
         type: String,
         required: false,
+    },
+    transactFromWallet: {
+        type: Number,
+        required: false,
     }
 })
 

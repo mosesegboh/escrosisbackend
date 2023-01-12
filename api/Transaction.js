@@ -20,6 +20,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
         unLockedTransaction, 
         status,
         transactionName,
+        transactFromWallet,
     } = req.body
 
     if (email == null 
@@ -56,6 +57,9 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
     }
     if (status) {
         status = status.trim()
+    }
+    if (transactFromWallet) {
+        transactFromWallet = transactFromWallet.trim()
     }
 
     if (!new Date(transactionDate).getTime()) {
@@ -108,7 +112,11 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             .then((transaction)=>{
                 const currentlockedTransactionBalance = transaction[1].lockedTransaction ? transaction[1].lockedTransaction : 0.00
                 const currentUnlockedTransactionBalance = transaction[1].unLockedTransaction ?  transaction[1].unLockedTransaction : 0.00
-                const currentBalance = transaction[1].balance ? transaction[1].balance : 0.00
+                var currentBalance = transaction[1].balance ? transaction[1].balance : 0.00
+                if(transactFromWallet == 1){
+                    // console.log('inside the here')
+                    var currentBalance = transaction[0].balance ? transaction[0].balance : 0.00
+                }
 
                 if (currentBalance == 0 && transactionName !== "wallet") {
                     var proceed = false
@@ -133,6 +141,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             //filter variables
             var filter = { transactionId:  transactionId};
             var update = { 
+                email: email,
                 lockedTransaction: lockedTransaction,
                 unLockedTransaction: unLockedTransaction,
                 transactionDate: transactionDate,
@@ -189,51 +198,78 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
         }
 
         if (newLockedTransactionBalanceValue[3]) {
-            setTimeout(function(){
-                        console.log("Hello World");
-                    }, 3000);
-            Transaction.findOneAndUpdate(filter, update, {
-                new: true
-                }).then(result => {
-                if (result){
-                    const status = "success"
-
-                    if (transactionType == "FirstLeg") {
+            if(transactFromWallet == 1){
+                const status = "success"
+                update.transactionId = transactionId;
+                update.amount = amount;
+                // console.log(update, '-update')
+                const newTransaction = new Transaction(update)
+                newTransaction.save()
+                .then(result => {
+                    if (result) {
+                        // console.log(result, '-result i got inside here')
                         emailFunction.sendTransactionCompleteEmail(result, res, status)
-                        var message = "The transaction has been saved successfully"
-                    }
-
-                    if (transactionType == "SecondLeg") {
-                        emailFunction.sendTransactionLockedEmail(result, res, status)
-                        var message = "The transaction has been locked successfully"
-                    }
-
-                    if (transactionType == "wallet") {
-                        emailFunction.sendAddWalletSuccessfulEmail(result, res, status)
-                        var message = "Wallet has been updated successfully"
+                        res.json({
+                            status: "SUCCESS",
+                            message: "The transaction was successfully added"
+                        })
                     }
                     
-                    res.json({
-                        status: "SUCCESS",
-                        message: message
+                    }).catch(err => {
+                        console.log(err)
+                        res.json({
+                            status: "FAILED",
+                            message: "AN error occured while saving user"
+                        })
                     })
-                }else{
+            }else{
+                setTimeout(function(){
+                    console.log("Hello World");
+                }, 3000);
+                Transaction.findOneAndUpdate(filter, update, {
+                    new: true
+                    }).then(result => {
+                    if (result){
+                        const status = "success"
+
+                        if (transactionType == "FirstLeg") {
+                            emailFunction.sendTransactionCompleteEmail(result, res, status)
+                            var message = "The transaction has been saved successfully"
+                        }
+
+                        if (transactionType == "SecondLeg") {
+                            emailFunction.sendTransactionLockedEmail(result, res, status)
+                            var message = "The transaction has been locked successfully"
+                        }
+
+                        if (transactionType == "wallet") {
+                            emailFunction.sendAddWalletSuccessfulEmail(result, res, status)
+                            var message = "Wallet has been updated successfully"
+                        }
+                        
+                        res.json({
+                            status: "SUCCESS",
+                            message: message
+                        })
+                    }else{
+                        res.json({
+                            status: "FAILED",
+                            message: "The transaction could not be completed - API"
+                        })
+                    }
+                }).catch(err => {
+                    const status = "failed"
+                    var result = {}
+            
+                    emailFunction.sendTransactionLockedEmail(result, res, status)
+                    console.log(err)
                     res.json({
                         status: "FAILED",
-                        message: "The transaction could not be completed - API"
+                        message: "An error occured, while locking the transaction"
                     })
-                }
-            }).catch(err => {
-                const status = "failed"
-                var result = {}
-        
-                emailFunction.sendTransactionLockedEmail(result, res, status)
-                console.log(err)
-                res.json({
-                    status: "FAILED",
-                    message: "An error occured, while locking the transaction"
                 })
-            })
+            }
+            
         }
                 
     }
