@@ -113,7 +113,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                 const currentlockedTransactionBalance = transaction[1].lockedTransaction ? transaction[1].lockedTransaction : 0.00
                 const currentUnlockedTransactionBalance = transaction[1].unLockedTransaction ?  transaction[1].unLockedTransaction : 0.00
                 var currentBalance = transaction[1].balance ? transaction[1].balance : 0.00
-                if(transactFromWallet == 1){
+                if(transactFromWallet == "yes"){
                     // console.log('inside the here')
                     var currentBalance = transaction[0].balance ? transaction[0].balance : 0.00
                 }
@@ -198,7 +198,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
         }
 
         if (newLockedTransactionBalanceValue[3]) {
-            if(transactFromWallet == 1){
+            if(transactFromWallet == "yes"){
                 const status = "success"
                 update.transactionId = transactionId;
                 update.amount = amount;
