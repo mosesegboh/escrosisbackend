@@ -124,6 +124,8 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                         status: "FAILED",
                         message: "You do not have enough funds to carry out this transaction. Please add funcds to your wallet"
                     })
+                }else if (transactionType == "SecondLeg") {
+                    proceed == false
                 }else{
                     var proceed = true
                 }
@@ -141,7 +143,6 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             //filter variables
             var filter = { transactionId:  transactionId};
             var update = { 
-                email: email,
                 lockedTransaction: lockedTransaction,
                 unLockedTransaction: unLockedTransaction,
                 transactionDate: transactionDate,
@@ -154,6 +155,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
         }
 
         if (transactionType == "SecondLeg"){
+            console.log(secondLegTransactionId, 'i am inside here o')
             //get update variables
             var transactionToUpdate = await Transaction.find({transactionId: secondLegTransactionId})
             .then((result) => { 
@@ -173,7 +175,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
 
             //filter variable
             var filter = { transactionId: secondLegTransactionId };
-            var update = { 
+            var update = {
                 transactionId: transactionId,
                 status: 'locked',
                 lockedTransaction: +amount + +transactionToUpdate.lockedTransaction,
@@ -181,8 +183,38 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                 secondLegTransactionId: secondLegTransactionId,
                 transactionName: transactionName,
                 transactionType: transactionName,
-                balance: +balance - +amount
+                balance: +balance - +amount,
+                amount: amount,
+                email: email,
+                date: date,
+                transactionDate: transactionDate,
+                details: details,
+                transactFromWallet: transactFromWallet
             };
+            // console.log(update, '-update')
+            const newTransaction = new Transaction(update)
+            newTransaction.save()
+            .then(result => {
+                if (result) {
+                    
+                    const status = "success"
+                    console.log(result, status)
+                    // console.log(result, '-result i got inside here')
+                    emailFunction.sendTransactionLockedEmail(result, res, status)
+                    res.json({
+                        status: "SUCCESS",
+                        message: "The transaction was successfully added"
+                    })
+                }
+            }).catch(err => {
+                console.log(err)
+                res.json({
+                    status: "FAILED",
+                    message: "AN error occured while saving user"
+                })
+            })
+
+            return
         }
 
         if (transactionName == 'wallet') {
@@ -198,16 +230,17 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
         }
 
         if (newLockedTransactionBalanceValue[3]) {
-            if(transactFromWallet == "yes"){
-                const status = "success"
+            if (transactFromWallet == "yes"){
                 update.transactionId = transactionId;
                 update.amount = amount;
+                update.email = email;
                 // console.log(update, '-update')
                 const newTransaction = new Transaction(update)
                 newTransaction.save()
                 .then(result => {
                     if (result) {
                         // console.log(result, '-result i got inside here')
+                        const status = "success"
                         emailFunction.sendTransactionCompleteEmail(result, res, status)
                         res.json({
                             status: "SUCCESS",
