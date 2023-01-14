@@ -178,7 +178,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             }
 
             //filter variable
-            var filter = { transactionId: secondLegTransactionId };
+            var filter = { transactionId: transactionId };
             var update = {
                 transactionId: transactionId,
                 status: 'locked',
