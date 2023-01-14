@@ -25,7 +25,7 @@ const TransactionSchema = new Schema({
         required: false,
     },
     transactFromWallet: {
-        type: Number,
+        type: String,
         required: false,
     }
 })
