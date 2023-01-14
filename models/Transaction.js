@@ -27,6 +27,10 @@ const TransactionSchema = new Schema({
     transactFromWallet: {
         type: String,
         required: false,
+    },
+    transactFromAddedFunds: {
+        type: String,
+        required: false,
     }
 })
 

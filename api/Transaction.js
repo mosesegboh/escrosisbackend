@@ -21,6 +21,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
         status,
         transactionName,
         transactFromWallet,
+        transactFromAddedFunds
     } = req.body
 
     if (email == null 
@@ -60,6 +61,9 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
     }
     if (transactFromWallet) {
         transactFromWallet = transactFromWallet.trim()
+    }
+    if (transactFromAddedFunds) {
+        transactFromAddedFunds = transactFromAddedFunds.trim()
     }
 
     if (!new Date(transactionDate).getTime()) {
@@ -124,7 +128,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                         status: "FAILED",
                         message: "You do not have enough funds to carry out this transaction. Please add funcds to your wallet"
                     })
-                }else if (transactionType == "SecondLeg") {
+                }else if (transactionType == "SecondLeg" && transactFromAddedFunds == "no") {
                     proceed == false
                 }else{
                     var proceed = true
@@ -191,30 +195,34 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                 details: details,
                 transactFromWallet: transactFromWallet
             };
-            // console.log(update, '-update')
-            const newTransaction = new Transaction(update)
-            newTransaction.save()
-            .then(result => {
-                if (result) {
-                    
-                    const status = "success"
-                    console.log(result, status)
-                    // console.log(result, '-result i got inside here')
-                    emailFunction.sendTransactionLockedEmail(result, res, status)
-                    res.json({
-                        status: "SUCCESS",
-                        message: "The transaction was successfully added"
-                    })
-                }
-            }).catch(err => {
-                console.log(err)
-                res.json({
-                    status: "FAILED",
-                    message: "AN error occured while saving user"
-                })
-            })
 
-            return
+            if (transactFromAddedFunds == "no"){
+                // console.log(update, '-update')
+                const newTransaction = new Transaction(update)
+                newTransaction.save()
+                .then(result => {
+                    if (result) {
+                        
+                        const status = "success"
+                        console.log(result, status)
+                        // console.log(result, '-result i got inside here')
+                        emailFunction.sendTransactionLockedEmail(result, res, status)
+                        res.json({
+                            status: "SUCCESS",
+                            message: "Your transaction has been successfuly locked"
+                        })
+                    }
+                }).catch(err => {
+                    console.log(err)
+                    res.json({
+                        status: "FAILED",
+                        message: "AN error occured while saving user"
+                    })
+                })
+
+                return
+            }
+            
         }
 
         if (transactionName == 'wallet') {
