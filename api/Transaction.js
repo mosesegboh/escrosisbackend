@@ -243,10 +243,6 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                 update.transactionId = transactionId;
                 update.amount = amount;
                 update.email = email;
-                //balance will remain thesame if you are doing from added funds
-                if(transactFromAddedFunds == "yes"){
-                    update.balance = newLockedTransactionBalanceValue[2]
-                }
                 
                 // console.log(update, '-update')
                 const newTransaction = new Transaction(update)
@@ -273,6 +269,10 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                 setTimeout(function(){
                     console.log("Hello World");
                 }, 5000);
+                //balance will remain thesame if you are doing from added funds
+                if(transactFromAddedFunds == "yes"){
+                    update.balance = newLockedTransactionBalanceValue[2]
+                }
                 Transaction.findOneAndUpdate(filter, update, {
                     new: true
                     }).then(result => {
