@@ -159,7 +159,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
         }
 
         if (transactionType == "SecondLeg"){
-            console.log(secondLegTransactionId, 'i am inside here o')
+            console.log(secondLegTransactionId, 'right track')
             //get update variables
             var transactionToUpdate = await Transaction.find({transactionId: secondLegTransactionId})
             .then((result) => { 
@@ -197,7 +197,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             };
 
             if (transactFromAddedFunds == "no"){
-                // console.log(update, '-update')
+                console.log(update, '-wrong track 1')
                 const newTransaction = new Transaction(update)
                 newTransaction.save()
                 .then(result => {
@@ -239,9 +239,15 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
 
         if (newLockedTransactionBalanceValue[3]) {
             if (transactFromWallet == "yes"){
+                console.log(update, '-wrong track 2')
                 update.transactionId = transactionId;
                 update.amount = amount;
                 update.email = email;
+                //balance will remain thesame if you are doing from added funds
+                if(transactFromAddedFunds == "yes"){
+                    update.balance = newLockedTransactionBalanceValue[2]
+                }
+                
                 // console.log(update, '-update')
                 const newTransaction = new Transaction(update)
                 newTransaction.save()
@@ -266,10 +272,11 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             }else{
                 setTimeout(function(){
                     console.log("Hello World");
-                }, 3000);
+                }, 5000);
                 Transaction.findOneAndUpdate(filter, update, {
                     new: true
                     }).then(result => {
+                        console.log(result, '<-result, right track')
                     if (result){
                         const status = "success"
 
