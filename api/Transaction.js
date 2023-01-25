@@ -5,6 +5,7 @@ const authMiddleware = require("../middleware/authMiddleware")
 const authenticateTokenMiddleware = require("../middleware/authenticateTokenMiddleware")
 const emailFunction = require('../services');
 const updateCustomerLockedBalance = require('../functions/transactions/Transactions')
+const transfer = require('../functions/transactions/processTransfers')
 
 router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateTokenMiddleware.authenticateTokenMiddleware, async  (req, res) => {
     
@@ -21,8 +22,13 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
         status,
         transactionName,
         transactFromWallet,
-        transactFromAddedFunds
+        transactFromAddedFunds,
     } = req.body
+
+    if (transactionName == 'transfer') {
+        transfer.processTransfers( req.body, res)
+        return
+    }
 
     if (email == null 
         || transactionDate == null 
@@ -65,6 +71,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
     if (transactFromAddedFunds) {
         transactFromAddedFunds = transactFromAddedFunds.trim()
     }
+
 
     if (!new Date(transactionDate).getTime()) {
         res.json({
@@ -202,7 +209,6 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                 newTransaction.save()
                 .then(result => {
                     if (result) {
-                        
                         const status = "success"
                         console.log(result, status)
                         // console.log(result, '-result i got inside here')
@@ -219,10 +225,8 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                         message: "AN error occured while saving user"
                     })
                 })
-
                 return
-            }
-            
+            } 
         }
 
         if (transactionName == 'wallet') {
@@ -237,6 +241,18 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             };    
         }
 
+        if (transactionName == 'airtime') {
+            //filter variable
+            const balance = newLockedTransactionBalanceValue[2]
+            var filter = { transactionId: transactionId };
+            var update = { 
+                balance: +balance - +amount,
+                transactionName: transactionName,
+                amount: amount,
+                details: "Purchase Of Airtime"
+            };    
+        }
+
         if (newLockedTransactionBalanceValue[3]) {
             if (transactFromWallet == "yes"){
                 console.log(update, '-wrong track 2')
@@ -244,12 +260,10 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                 update.amount = amount;
                 update.email = email;
                 
-                // console.log(update, '-update')
                 const newTransaction = new Transaction(update)
                 newTransaction.save()
                 .then(result => {
                     if (result) {
-                        // console.log(result, '-result i got inside here')
                         const status = "success"
                         emailFunction.sendTransactionCompleteEmail(result, res, status)
                         res.json({
@@ -257,17 +271,16 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                             message: "The transaction was successfully added"
                         })
                     }
-                    
-                    }).catch(err => {
-                        console.log(err)
-                        res.json({
-                            status: "FAILED",
-                            message: "AN error occured while saving user"
-                        })
+                }).catch(err => {
+                    console.log(err)
+                    res.json({
+                        status: "FAILED",
+                        message: "An error occured while saving user"
                     })
+                })
             }else{
                 setTimeout(function(){
-                    console.log("Hello World");
+                    console.log("Delaying for 5 secs for webhook");
                 }, 5000);
                 //balance will remain thesame if you are doing from added funds
                 if(transactFromAddedFunds == "yes"){
@@ -317,9 +330,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                     })
                 })
             }
-            
-        }
-                
+        }      
     }
 })
 
