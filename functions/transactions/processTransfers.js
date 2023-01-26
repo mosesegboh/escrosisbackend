@@ -43,7 +43,7 @@ const processTransfers = async (data, res) => {
         return [currentlockedTransactionBalance, currentUnlockedTransactionBalance, currentBalance]
     })
 
-    if ( amount > userCurrentDetails[0]) {
+    if ( amount > userCurrentDetails[2]) {
         return res.json({
             status: "FAILED",
             message: "You do not have sufficient funds to complete your transaction"
