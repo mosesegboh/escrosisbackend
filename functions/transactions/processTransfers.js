@@ -30,9 +30,9 @@ const processTransfers = async (data, res) => {
         var currentlockedTransactionBalance = transaction[1].lockedTransaction ? transaction[1].lockedTransaction : 0.00
         var currentUnlockedTransactionBalance = transaction[1].unLockedTransaction ?  transaction[1].unLockedTransaction : 0.00
         var currentBalance = transaction[1].balance ? transaction[1].balance : 0.00
-        if(transactFromWallet == "yes"){
-            var currentBalance = transaction[0].balance ? transaction[0].balance : 0.00
-        }
+        // if(transactFromWallet == "yes"){
+        //     var currentBalance = transaction[0].balance ? transaction[0].balance : 0.00
+        // }
 
         if (currentBalance == 0.00 && transactionName !== "wallet") {
             return res.json({
@@ -100,7 +100,7 @@ const processTransfers = async (data, res) => {
             if (result) {
                 const status = "success"
                 transferFunction.sendTransferEmail(result, res, status)
-                res.json({
+                return res.json({
                     status: "SUCCESS",
                     message: "The transaction was successfully added"
                 })
