@@ -27,12 +27,10 @@ const processTransfers = async (data, res) => {
     // return
     const userCurrentDetails = await Transaction.find({"Transaction.email": email}).sort({_id: -1}).limit(2)
     .then((transaction)=>{
-        var currentlockedTransactionBalance = transaction[1].lockedTransaction ? transaction[1].lockedTransaction : 0.00
-        var currentUnlockedTransactionBalance = transaction[1].unLockedTransaction ?  transaction[1].unLockedTransaction : 0.00
         var currentBalance = transaction[1].balance ? transaction[1].balance : 0.00
-        // if(transactFromWallet == "yes"){
-        //     var currentBalance = transaction[0].balance ? transaction[0].balance : 0.00
-        // }
+        if(transactFromWallet == "yes"){
+            var currentBalance = transaction[0].balance ? transaction[0].balance : 0.00
+        }
 
         if (currentBalance == 0.00 && transactionName !== "wallet") {
             return res.json({
@@ -40,10 +38,10 @@ const processTransfers = async (data, res) => {
                 message: "You do not have enough funds to carry out this transaction. Please add funds to your wallet"
             })
         }
-        return [currentlockedTransactionBalance, currentUnlockedTransactionBalance, currentBalance]
+        return [currentBalance]
     })
 
-    if ( amount > userCurrentDetails[2]) {
+    if ( amount > userCurrentDetails[0]) {
         return res.json({
             status: "FAILED",
             message: "You do not have sufficient funds to complete your transaction"
@@ -55,9 +53,7 @@ const processTransfers = async (data, res) => {
         transactionId: transactionId,
         transactionName: transactionName,
         transactionType: transactionType,
-        balance: +userCurrentDetails[2] - +amount,
-        lockedTransaction: +userCurrentDetails[0],
-        unLockedTransaction: +userCurrentDetails[1],
+        balance: +userCurrentDetails[0] - +amount,
         amount: amount,
         email: email,
         date: date,
@@ -100,7 +96,7 @@ const processTransfers = async (data, res) => {
             if (result) {
                 const status = "success"
                 transferFunction.sendTransferEmail(result, res, status)
-                return res.json({
+                res.json({
                     status: "SUCCESS",
                     message: "The transaction was successfully added"
                 })

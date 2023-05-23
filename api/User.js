@@ -41,13 +41,13 @@ transporter.verify((error, success) => {
 //sign up
 router.post('/signup', (req, res) => {
 
-    let {name, email, password, dateOfBirth} = req.body
-
+    let {name, email, password, dateOfBirth, isGoogleSignIn} = req.body
+    
     name = name.trim()
     email = email.trim()
-    password = password.trim()
-    dateOfBirth = dateOfBirth.trim()
-
+    isGoogleSignIn = isGoogleSignIn !== "" ? true : false 
+    password =  isGoogleSignIn ? "googlesignintemppassword" : password.trim()
+    dateOfBirth = isGoogleSignIn ? new Date() : dateOfBirth.trim()
     //validation
     if (name == "" || email == "" || password == "" || dateOfBirth == ""){
         res.json({
@@ -78,10 +78,35 @@ router.post('/signup', (req, res) => {
         //if validation passed proceed by checking if the user already exist in the database
         User.find({ email}).then(result => {
             if(result.length){
-                res.json({
-                    status: "FAILED",
-                    message: "User Already exists in the database"
-                })
+                if (isGoogleSignIn == true){
+                    //You can update the last user login
+                    result.verified = true
+                    const filter = { _id: result._id }
+
+                    Transaction.findOneAndUpdate(filter, result, {
+                        new: true
+                        }).then(updatedResult => {
+                            if (updatedResult) {
+                                res.json({
+                                    status: "VERIFIED",
+                                    message: 'Google Sign In is verified successfully',
+                                    date: result
+                                })
+                            }
+                        })
+                    
+
+                    // res.json({
+                    //     status: "VERIFIED",
+                    //     message: 'Google Sign In is verified successfully',
+                    //     date: result
+                    // })
+                }else{
+                    res.json({
+                        status: "FAILED",
+                        message: "User Already exists in the database"
+                    })
+                }
             }else{
                 //create the user
 
@@ -94,8 +119,10 @@ router.post('/signup', (req, res) => {
                         email,
                         password: hashedPassword,
                         dateOfBirth,
-                        verified: false
+                        verified: false,
+                        isGoogleSignIn
                     })
+                    
 
                     newUser
                     .save()
@@ -121,14 +148,14 @@ router.post('/signup', (req, res) => {
                     }).catch(err => {
                         res.json({
                             status: "FAILED",
-                            message: "AN error occured while saving user"
+                            message: "An error occured while saving user"
                         })
                     })
 
                 }).catch(err => {
                     res.json({
                         status: "FAILED",
-                        message: "AN error occured during password hashing"
+                        message: "An error occured during password hashing"
                     })
                 })
             }
@@ -144,8 +171,15 @@ router.post('/signup', (req, res) => {
 
 
 //send otp verification Email
-const sendOTPVerificationEmail = async ({_id, email}, res) => {
+const sendOTPVerificationEmail = async ({_id, email, isGoogleSignIn}, res) => {
     try {
+        if (isGoogleSignIn) {
+            res.json({
+                status: "VERIFIED",
+                message: 'Google Sign In is verified successfully'
+            })
+            return
+        }
         const otp = `${Math.floor(1000 + Math.random() * 9000)}`;
 
         //mail options
