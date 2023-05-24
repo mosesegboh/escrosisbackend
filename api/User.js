@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const ObjectID = require('mongodb')
+const ObjectId = require('mongodb').ObjectId
 const mongoose = require('mongoose')
 const jwt = require('jsonwebtoken')
 const config = require('config')
@@ -80,22 +80,19 @@ router.post('/signup', (req, res) => {
             if(result.length){
                 if (isGoogleSignIn == true){
                     //You can update the last user login
-                    result.verified = true
-                    const filter = { _id: result._id }
-
-                    Transaction.findOneAndUpdate(filter, result, {
-                        new: true
-                        }).then(updatedResult => {
+                    User.findOneAndUpdate(
+                        { _id: new ObjectId(result[0]._id) }, 
+                        { $set: { verified: true } }, 
+                        { new: true})
+                        .then(updatedResult => {
                             if (updatedResult) {
                                 res.json({
                                     status: "VERIFIED",
                                     message: 'Google Sign In is verified successfully',
-                                    date: result
+                                    data: result
                                 })
                             }
                         })
-                    
-
                     // res.json({
                     //     status: "VERIFIED",
                     //     message: 'Google Sign In is verified successfully',
