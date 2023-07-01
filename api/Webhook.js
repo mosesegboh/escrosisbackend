@@ -37,17 +37,18 @@ router.post('/feedback', (req, res) => {
    const amount = response.amount
    const date = response.createdAt
    const status = response.status
+   const eventType = response['event.type']
 
    console.log(response, '---this is web hook---')
    console.log(status, '---this is response status---')
-   console.log(response.event.type, '---this is event type---')
+   console.log(response['event.type'], '---this is event type---')
     //if (response.status == "successful") {
     //find the details with transaction ID.
     //if transaction foung, update the transaction to successful
     Transaction.findOne({ transactionId: transactionId })
     .then(transaction => {
         if (transaction) {
-            if (response.event.type == 'CARD_TRANSACTION' || status == "successful") {
+            if (eventType == 'CARD_TRANSACTION' || status == "successful") {
                 transaction.status = "successful";
                 transaction.balance = +transaction.balance + +transaction.amount
             }
