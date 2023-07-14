@@ -1,7 +1,9 @@
 const walletTemplate = require('./email/templates/walletTemplate')
 const escrowTemplate = require('./email/templates/escrowTemplate')
+const {virtualCardFundTransactionSuccess, 
+    virtualCardFundTransactionFailed} = require('./email/templates/virtualCardFundingSuccess')
 const verificationEmailTemplate = require('./email/templates/verificationEmailTemplate')
-const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken')
 const nodemailer = require('nodemailer')
 
 //unique string
@@ -9,8 +11,8 @@ const {v4: uuidv4} = require('uuid')
 
 const generateAccessToken = (req,res,next) => {
    return jwt.sign(user,
-         config.get("ACCESS_TOKEN_SECRET"), 
-         { expiresIn: 360 },)
+    config.get("ACCESS_TOKEN_SECRET"), 
+    { expiresIn: 360 },)
 }
 
 let transporter = nodemailer.createTransport({
@@ -63,28 +65,28 @@ transporter.verify((error, success) => {
                   .then(()=>{
                       //send mail
                       transporter
-                          .sendMail(mailOPtions)
-                          .then(() => {
-                              //email sent and verification record saved successfully
-                              res.json({
-                                  status: "PENDING",
-                                  message: "Verification email sent!"
-                              })
-                          })
-                          .catch((error)=>{
-                              console.log(error)
-                              res.json({
-                                  status: "FAILED",
-                                  message: "Verification email failed"
-                              })
-                          })
+                        .sendMail(mailOPtions)
+                        .then(() => {
+                            //email sent and verification record saved successfully
+                            res.json({
+                                status: "PENDING",
+                                message: "Verification email sent!"
+                            })
+                        })
+                        .catch((error)=>{
+                            console.log(error)
+                            res.json({
+                                status: "FAILED",
+                                message: "Verification email failed"
+                            })
+                        })
                   })
                   .catch((error) => {
-                      console.log(error)
-                      res.json({
-                          status: "FAILED",
-                          message: "Couldn't save verification email data!"
-                      })
+                    console.log(error)
+                    res.json({
+                        status: "FAILED",
+                        message: "Couldn't save verification email data!"
+                    })
                   })
           })
           .catch(()=>{
@@ -155,6 +157,36 @@ const sendTransactionLockedEmail = async ({email, transactionId, transactionDate
     }
 }
 
+const sendFirstLegSecondPartyTransactionSuccess = async ({email, transactionId, transactionDate, amount, transactionType, details, secondLegTransactionId}, res, status) => {
+    try {
+        if (status == "success"){
+            var mailOPtions = { 
+                from : process.env.AUTH_EMAIL,
+                to: email,
+                subject: escrowTemplate.firstLegSecondPartyTransactionSuccess({email, transactionId, transactionDate, amount, transactionType, details, secondLegTransactionId}).subject,
+                html:  escrowTemplate.firstLegSecondPartyTransactionSuccess({email, transactionId, transactionDate, amount, transactionType, details, secondLegTransactionId}).body,
+            }
+        }
+
+        // if (status == "failed") {
+        //     var mailOPtions = { 
+        //         from : process.env.AUTH_EMAIL,
+        //         to: email,
+        //         subject: escrowTemplate.secondLegTransactionFailed({email, transactionId, transactionDate, amount, transactionType, details, secondLegTransactionId})[0],
+        //         html:  escrowTemplate.secondLegTransactionFailed({email, transactionId, transactionDate, amount, transactionType, details, secondLegTransactionId})[1],
+        //     }
+        // }
+        
+        await transporter.sendMail(mailOPtions)
+
+    } catch (error) {
+        res.json({
+            status: "FAILED",
+            message: error.message,
+        })
+    }
+}
+
 const sendAddWalletSuccessfulEmail = async ({email, transactionId, transactionDate, amount, transactionType, details}, res, status) => {
     try {
         if (status == "success"){
@@ -185,10 +217,49 @@ const sendAddWalletSuccessfulEmail = async ({email, transactionId, transactionDa
     }
 }
 
+const sendFundVirtualCardEmail = async ({email, transactionId, transactionDate, amount, transactionType, details}, res, status) => {
+    try {
+        if (status == "success"){
+            var mailOPtions = { 
+                from : process.env.AUTH_EMAIL,
+                to: email,
+                subject: virtualCardFundTransactionSuccess({email, transactionId, transactionDate, amount, transactionType, details})[0],
+                html: virtualCardFundTransactionSuccess({email, transactionId, transactionDate, amount, transactionType, details})[1],
+            }
+        }
+
+        if (status == "failed") {
+            var mailOPtions = { 
+                from : process.env.AUTH_EMAIL,
+                to: email,
+                subject: virtualCardFundTransactionFailed({email, transactionId, transactionDate, amount, transactionType, details})[0],
+                html: virtualCardFundTransactionFailed({email, transactionId, transactionDate, amount, transactionType, details})[1],
+            }
+        }
+        
+        await transporter.sendMail(mailOPtions)
+
+    } catch (error) {
+        res.json({
+            status: "FAILED",
+            message: error.message,
+        })
+    }
+}
+
 function getRandom(length) {
     return Math.floor(
         Math.pow(10, length - 1) + Math.random() * 9 * Math.pow(10, length - 1)
     );
 }
 
-module.exports = {generateAccessToken, sendVerificationEmail, sendTransactionCompleteEmail, sendTransactionLockedEmail, getRandom, sendAddWalletSuccessfulEmail}
+module.exports = {
+    generateAccessToken, 
+    sendVerificationEmail, 
+    sendTransactionCompleteEmail, 
+    sendTransactionLockedEmail, 
+    getRandom, 
+    sendAddWalletSuccessfulEmail,
+    sendFundVirtualCardEmail,
+    sendFirstLegSecondPartyTransactionSuccess,
+}

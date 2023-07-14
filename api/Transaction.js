@@ -5,7 +5,12 @@ const authMiddleware = require("../middleware/authMiddleware")
 const authenticateTokenMiddleware = require("../middleware/authenticateTokenMiddleware")
 const emailFunction = require('../services');
 const updateCustomerLockedBalance = require('../functions/transactions/Transactions')
-const transfer = require('../functions/transactions/processTransfers')
+const {processTransfers} = require('../functions/transactions/processTransfers')
+const {processVirtualCards} = require('../functions/transactions/processVirtualCards')
+const {processSearchSecondLeg} = require('../functions/transactions/processSearchSecondLeg')
+const {processSwapCurrency} = require('../functions/transactions/processSwapCurrency')
+const {processAddFundsToWallet} = require('../functions/transactions/processAddFundsToWallet')
+const {processBillPayment} = require('../functions/transactions/processBillPayment')
 
 router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateTokenMiddleware.authenticateTokenMiddleware, async  (req, res) => {
     
@@ -23,12 +28,39 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
         transactionName,
         transactFromWallet,
         transactFromAddedFunds,
+        secondPartyEmail,
+        secondPartyPhone
     } = req.body
+    // console.log(transactionName, '--transaction name')
+    // return
 
+    // const searchQuery = req.query.searchSecondLeg
     if (transactionName == 'transfer') {
-        transfer.processTransfers( req.body, res)
+        processTransfers( req.body, res)
         return
     }
+
+    if (transactionName == 'virtualcards') {
+        processVirtualCards( req.body, res)
+        return
+    }
+
+    if (transactionName == 'swapcurrency') {
+        processSwapCurrency( req.body, res)
+        return
+    }
+
+    if (transactionName == 'wallet') {
+        processAddFundsToWallet( req.body, res)
+        return
+    }
+
+    if (transactionName == 'billPayment') {
+        processBillPayment( req.body, res)
+        return
+    }
+
+    console.log('here 22222')
 
     if (email == null 
         || transactionDate == null 
@@ -71,7 +103,12 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
     if (transactFromAddedFunds) {
         transactFromAddedFunds = transactFromAddedFunds.trim()
     }
-
+    if (secondPartyEmail) {
+        secondPartyEmail = secondPartyEmail.trim()
+    }
+    if (secondPartyPhone) {
+        secondPartyPhone = secondPartyPhone.trim()
+    }
 
     if (!new Date(transactionDate).getTime()) {
         res.json({
@@ -159,6 +196,8 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                 transactionDate: transactionDate,
                 transactionType: transactionType,
                 transactionLeg: transactionType,
+                secondPartyEmail: secondPartyEmail,
+                secondPartyPhone: secondPartyPhone,
                 details: details,
                 status: status,
                 balance: +balance - +amount
@@ -204,7 +243,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             };
 
             if (transactFromAddedFunds == "no"){
-                console.log(update, '-wrong track 1')
+                // console.log(update, '-wrong track 1')
                 const newTransaction = new Transaction(update)
                 newTransaction.save()
                 .then(result => {
@@ -213,6 +252,7 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                         console.log(result, status)
                         // console.log(result, '-result i got inside here')
                         emailFunction.sendTransactionLockedEmail(result, res, status)
+                        emailFunction.sendFirstLegSecondPartyTransactionSuccess(result, res, status)
                         res.json({
                             status: "SUCCESS",
                             message: "Your transaction has been successfuly locked"
@@ -229,29 +269,29 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
             } 
         }
 
-        if (transactionName == 'wallet') {
-            //filter variable
-            const balance = newLockedTransactionBalanceValue[2]
-            var filter = { transactionId: transactionId };
-            var update = { 
-                balance: +balance + +amount,
-                transactionName: transactionName,
-                amount: amount,
-                details: "Add funds To Wallet"
-            };    
-        }
+        // if (transactionName == 'wallet') {
+        //     //filter variable
+        //     const balance = newLockedTransactionBalanceValue[2]
+        //     var filter = { transactionId: transactionId };
+        //     var update = { 
+        //         balance: +balance + +amount,
+        //         transactionName: transactionName,
+        //         amount: amount,
+        //         details: "Add funds To Wallet"
+        //     };    
+        // }
 
-        if (transactionName == 'airtime') {
-            //filter variable
-            const balance = newLockedTransactionBalanceValue[2]
-            var filter = { transactionId: transactionId };
-            var update = { 
-                balance: +balance - +amount,
-                transactionName: transactionName,
-                amount: amount,
-                details: "Purchase Of Airtime"
-            };    
-        }
+        // if (transactionName == 'airtime') {
+        //     //filter variable
+        //     const balance = newLockedTransactionBalanceValue[2]
+        //     var filter = { transactionId: transactionId };
+        //     var update = { 
+        //         balance: +balance - +amount,
+        //         transactionName: transactionName,
+        //         amount: amount,
+        //         details: "Purchase Of Airtime"
+        //     };    
+        // }
 
         if (newLockedTransactionBalanceValue[3]) {
             if (transactFromWallet == "yes"){
@@ -286,15 +326,18 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
                 if(transactFromAddedFunds == "yes"){
                     update.balance = newLockedTransactionBalanceValue[2]
                 }
-                Transaction.findOneAndUpdate(filter, update, {
-                    new: true
-                    }).then(result => {
+                // Transaction.findOneAndUpdate(filter, update, {
+                //     new: true
+                const newWalletTransaction = new Transaction(update)
+                newWalletTransaction.save()
+                .then(result => {
                         console.log(result, '<-result, right track')
                     if (result){
-                        const status = "success"
+                        const status = "pending"
 
                         if (transactionType == "FirstLeg") {
-                            emailFunction.sendTransactionCompleteEmail(result, res, status)
+                            emailFunction.sendTransactionLockedEmail(result, res, status)
+                            emailFunction.sendFirstLegSecondPartyTransactionSuccess(result, res, status)
                             var message = "The transaction has been saved successfully"
                         }
 
@@ -334,7 +377,42 @@ router.post('/add-transaction',  authMiddleware.authMiddleware, authenticateToke
     }
 })
 
+router.post('/test-api', (req, res) => {
+
+    if (req.query.module = 'airtime-success') {
+        console.log('i was here ppp')
+        return res.json({
+            "status": "success",
+            "message": "Bill status fetch successful",
+            "data": {
+                "currency": "NGN",
+                "customer_id": "2348109728098",
+                "frequency": "One Time",
+                "amount": "500.0000",
+                "product": "AIRTIME",
+                "product_name": "MTN",
+                "commission": 15,
+                "transaction_date": "2022-06-07T10:59:40.72Z",
+                "country": "NG",
+                "tx_ref": "CF-FLYAPI-20220607105940408290",
+                "extra": null,
+                "product_details": "FLY-API-NG-AIRTIME-MTN",
+                "status": "successful",
+                "code": "200"
+            }
+        })
+        
+    }
+})
+
 router.post('/get-transactions', authMiddleware.authMiddleware, authenticateTokenMiddleware.authenticateTokenMiddleware, (req, res) => {
+    // console.log('i was here')
+
+    if (req.query.searchSecondLeg) {
+        // console.log('i was here')
+        processSearchSecondLeg(req.query.searchSecondLeg, res)
+        return
+    }
     
     let {email} = req.body
 
