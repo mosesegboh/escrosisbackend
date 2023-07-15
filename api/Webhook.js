@@ -22,7 +22,7 @@ router.post('/feedback', (req, res) => {
                 transaction.balanceForAdditionalCurrencies = updateParticularCurrencyBalances(+transaction.amount, process.env.DEFAULT_CURRENCY, transaction.balanceForAdditionalCurrencies)
             }
 
-            console.log(transaction, '--this is transaction')
+            console.log(transaction, transaction.balanceForAdditionalCurrencies, '--this is transaction')
             // else if (transaction.transactionName == "wallet") {
             //     transaction.balance = +transaction.balance + +transaction.amount
             // } 

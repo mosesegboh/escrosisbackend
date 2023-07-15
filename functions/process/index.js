@@ -24,7 +24,6 @@ const getCurrentUserDetails = async ({email, amount, transactFromWallet}, sortOr
         var condition = {}
     }
 
-    
     const userDetails = await Transaction.find(
         // {"Transaction.email": email},
         condition
@@ -33,11 +32,11 @@ const getCurrentUserDetails = async ({email, amount, transactFromWallet}, sortOr
         
         if (transaction) {
             // console.log(transaction)
-            var currentlockedTransactionBalance = (transaction.length > 1 && transaction[1].lockedTransaction) ? transaction[1].lockedTransaction : (limit == 1) ? transaction[0].lockedTransaction : 0.00
-            var currentUnlockedTransactionBalance = (transaction.length > 1 && transaction[1].unLockedTransaction ) ?  transaction[1].unLockedTransaction : (limit == 1) ? transaction[0].lockedTransaction : 0.00
-            var currentBalance = (transaction.length > 1 && transaction[1].balance) ? transaction[1].balance : (limit == 1) ? transaction[0].balance : 0.00
-            var userBalanceForAdditionalCurrencies = (transaction.length > 1 && transaction[1].balanceForAdditionalCurrencies) ? transaction[1].balanceForAdditionalCurrencies : limit == 1 ? transaction[0].balanceForAdditionalCurrencies : 0.00
-            var userCurrentTransactionCurrency = (transaction.length > 1 && transaction[1].transactionCurrency) ? transaction[1].transactionCurrency : limit == 1 ? transaction[0].transactionCurrency : null
+            var currentlockedTransactionBalance = (transaction.length > 1 && transaction[1].lockedTransaction) ? transaction[1].lockedTransaction : (limit == 1 && transaction[0]) ? transaction[0].lockedTransaction : 0.00
+            var currentUnlockedTransactionBalance = (transaction.length > 1 && transaction[1].unLockedTransaction ) ?  transaction[1].unLockedTransaction : (limit == 1 && transaction[0]) ? transaction[0].lockedTransaction : 0.00
+            var currentBalance = (transaction.length > 1 && transaction[1].balance) ? transaction[1].balance : (limit == 1 && transaction[0]) ? transaction[0].balance : 0.00
+            var userBalanceForAdditionalCurrencies = (transaction.length > 1 && transaction[1].balanceForAdditionalCurrencies) ? transaction[1].balanceForAdditionalCurrencies : (limit == 1 && transaction[0]) ? transaction[0].balanceForAdditionalCurrencies : 0.00
+            var userCurrentTransactionCurrency = (transaction.length > 1 && transaction[1].transactionCurrency) ? transaction[1].transactionCurrency : (limit == 1 && transaction[0]) ? transaction[0].transactionCurrency : null
 
             if ( amount > currentBalance && transactFromWallet == "yes") {
                 return res.json({
@@ -56,8 +55,7 @@ const getCurrentUserDetails = async ({email, amount, transactFromWallet}, sortOr
 
             // console.log(userDetailsObject, 'user details object')
             // return
-
-            return userDetailsObject;
+            return userDetailsObject; 
         
             // return [
             //     currentlockedTransactionBalance, 
@@ -75,7 +73,6 @@ const getCurrentUserDetails = async ({email, amount, transactFromWallet}, sortOr
 }).catch(err => {
     console.log(err, '--an error occured')
 })
-
     // return [currentlockedTransactionBalance, currentUnlockedTransactionBalance, currentBalance]
     return userDetails
 }
@@ -105,8 +102,6 @@ const saveTransaction = (filter = {}, update, data, res = {}, directSave = "") =
                 const relevantTemplate = (result.transactionName == "wallet") ? walletTemplate :
                 (result.transactionName == "billPayment") ? billPaymentTemplate : ''
 
-                
-
                 sendEmailFunction(result, res, status, relevantTemplate)
 
                 return res.json({
@@ -130,7 +125,6 @@ const saveTransaction = (filter = {}, update, data, res = {}, directSave = "") =
     }
 
     console.log('here 1111')
-    
     if (data.transactFromWallet == "yes"){    
         const newTransaction = new Transaction(update)
         newTransaction.save()
@@ -169,7 +163,6 @@ const saveTransaction = (filter = {}, update, data, res = {}, directSave = "") =
             if (result){
                 const status = "success"
                 
-
                 sendEmailFunction(result, res, status, successBillPayment)
                 
                 return res.json({
@@ -197,7 +190,9 @@ const saveTransaction = (filter = {}, update, data, res = {}, directSave = "") =
 
 const updateParticularCurrencyBalances = (amount, currency, multipleCurrencyObject) => {
     multipleCurrencyObject.forEach((item) => {
-        if (item.transactionCurrency === currency) { item.mainBalanceAfterTransaction = +item.mainBalanceAfterTransaction + +amount }
+        if (item.transactionCurrency === currency) { 
+            item.mainBalanceAfterTransaction = +item.mainBalanceAfterTransaction + +amount 
+        }
     })
     return multipleCurrencyObject
 }
