@@ -52,7 +52,6 @@ const getCurrentUserDetails = async ({email, amount, transactFromWallet}, sortOr
                 balanceForAdditionalCurrencies: userBalanceForAdditionalCurrencies,
                 userCurrentTransactionCurrency: userCurrentTransactionCurrency
             }
-
             // console.log(userDetailsObject, 'user details object')
             // return
             return userDetailsObject; 

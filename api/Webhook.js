@@ -19,9 +19,11 @@ router.post('/feedback', (req, res) => {
             if (eventType == 'CARD_TRANSACTION' || status == "successful") {
                 transaction.status = "successful";
                 transaction.balance = +transaction.balance + +transaction.amount
-                transaction.balanceForAdditionalCurrencies = updateParticularCurrencyBalances(+transaction.amount, process.env.DEFAULT_CURRENCY, transaction.balanceForAdditionalCurrencies)
+                if (transaction.balanceForAdditionalCurrencies.length > 0 && balanceForAdditionalCurrencies[0] !== 0) {
+                    console.log('i got inside here')
+                    transaction.balanceForAdditionalCurrencies = updateParticularCurrencyBalances(+transaction.amount, process.env.DEFAULT_CURRENCY, transaction.balanceForAdditionalCurrencies)
+                }
             }
-
             console.log(transaction, transaction.balanceForAdditionalCurrencies, '--this is transaction')
             // else if (transaction.transactionName == "wallet") {
             //     transaction.balance = +transaction.balance + +transaction.amount
