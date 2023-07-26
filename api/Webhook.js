@@ -19,7 +19,9 @@ router.post('/feedback', (req, res) => {
             if (eventType == 'CARD_TRANSACTION' || status == "successful") {
                 transaction.status = "successful";
                 transaction.balance = +transaction.balance + +transaction.amount
-                if (transaction.balanceForAdditionalCurrencies.length > 0 && balanceForAdditionalCurrencies[0] !== 0) {
+                if ( transaction.balanceForAdditionalCurrencies 
+                    && transaction.balanceForAdditionalCurrencies.length > 0 
+                    && transaction.balanceForAdditionalCurrencies[0] !== 0) {
                     console.log('i got inside here')
                     transaction.balanceForAdditionalCurrencies = updateParticularCurrencyBalances(+transaction.amount, process.env.DEFAULT_CURRENCY, transaction.balanceForAdditionalCurrencies)
                 }

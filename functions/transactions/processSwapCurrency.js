@@ -17,10 +17,10 @@ const processSwapCurrency = async (data, res) => {
             const currencyKeyFrom = obj.fromCurrency;
             // const currencyKeyPrevBalanceFrom = obj.prevBalanceFrom;
             // const value = obj.balance;
-            console.log(obj)
-            // console.log(mulitpleCurrencyList)
-            console.log(data.sourceCurrency, currencyKeyTo, data.transactionCurrency, '-- CURRENCIES')
-            console.log(data.sourceCurrency, currencyKeyFrom, '-- CURRENCIES')
+            // console.log(obj)
+            // // console.log(mulitpleCurrencyList)
+            // console.log(data.sourceCurrency, currencyKeyTo, data.transactionCurrency, '-- CURRENCIES')
+            // console.log(data.sourceCurrency, currencyKeyFrom, '-- CURRENCIES')
             
             if ( currencyKeyTo == data.sourceCurrency ) {  
                 obj.auditEntry = "updated-old-currency"
@@ -78,7 +78,7 @@ const processSwapCurrency = async (data, res) => {
                     amountTransacted: data.convertedAmount,
                     balanceCurrency: +data.convertedAmount,
                     currencyHoldingBalance: data.sourceCurrency,
-                    latestCurrencyBalanceForApp: data.newBalanceToAfterTransaction,
+                    latestCurrencyBalanceForApp: data.newBalanceFromAfterTransaction,
                     mainBalanceAfterTransaction: data.mainBalanceAfterTransaction,
                     mainBalanceBeforeTransaction: data.mainBalanceBeforeTransaction,
                     prevBalanceTo: +data.prevBalanceTo,
@@ -98,7 +98,7 @@ const processSwapCurrency = async (data, res) => {
                     sourceCurrency: data.sourceCurrency,
                     destinationCurrency: data.destinationCurrency,
                     amount: data.amount,
-                    transactedAmountAfterConversion: data.mainBalanceAfterTransaction,
+                    transactedAmountAfterConversion: data.convertedAmount,
                     email: data.email,
                     balance: data.mainBalanceAfterTransaction,
                     mainBalanceAfterTransaction: data.mainBalanceAfterTransaction,
