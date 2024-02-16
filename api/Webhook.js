@@ -13,7 +13,10 @@ router.post('/feedback', (req, res) => {
 //    console.log(response, '---this is web hook---')
 //    console.log(status, '---this is response status---')
 //    console.log(response['event.type'], '---this is event type---')
-    Transaction.findOne({ transactionId: transactionId })
+    setTimeout(function() {
+        console.log("This message will be displayed after 5 seconds");
+
+        Transaction.findOne({ transactionId: transactionId })
     .then(transaction => {
         if (transaction) {
             if (eventType == 'CARD_TRANSACTION' || status == "successful") {
@@ -42,6 +45,9 @@ router.post('/feedback', (req, res) => {
     .catch(error => {
         console.log(error)
     })
+    
+    }, 5000); // 3000 milliseconds = 3 seconds
+    
 })
 
 module.exports = router
