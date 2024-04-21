@@ -8,24 +8,14 @@ const processCancelTransactionImmediate = async (data, res) => {
 
     let { transactionId } = data
 
-    try
-    {
-        let transactionToCancel = await Transaction.find({transactionId: transactionId})
+    try{
+        let transactionToCancel = await Transaction.findOne({transactionId: transactionId})
                 
         if (transactionToCancel) {
             await cancelTransaction(transactionToCancel, res)
-        }else{
-            return res.json({
-                status: "FAILED",
-                message: "You cannot redeem this transaction!"
-            })
         }
     } catch(error) {
         console.log(err);
-        return res.json({
-            status: "FAILED",
-            message: "An error occurred!"
-        })
     }
 }
 

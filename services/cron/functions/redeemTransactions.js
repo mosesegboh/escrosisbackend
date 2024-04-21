@@ -29,4 +29,4 @@ const redeemTransactionFunction = async  () => {
   }
 }
 
-module.exports = {redeemTransactionFunction}
+module.exports = {redeemTransactionFunction} 

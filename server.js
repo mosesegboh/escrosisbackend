@@ -2,11 +2,11 @@ require('./config/db')
 require('events').EventEmitter.defaultMaxListeners = 100; // or any other number you find reasonable
 
 var cors = require('cors')
-const socketIo = require('socket.io');
+const socketIo = require('socket.io'); 
 const http = require('http');
 
 const app = require('express')()
-const port = process.env.PORT || 3021
+const port = process.env.PORT || 3022
 
 // Create a server instance
 const server = http.createServer(app);

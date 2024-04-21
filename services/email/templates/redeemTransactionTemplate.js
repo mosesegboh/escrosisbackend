@@ -2,14 +2,14 @@ const success = ({transactionId,  amount,  status, transactionDate, details}) =>
         
     const subject = `Your Escrow Transaction Has Now Been Redeemed`
 
-    const body = `
-    <html>
+    const body = `<html>
         <head>
             <img
                 src="${process.env.EMAIL_HEADER_BANNER}" 
                 alt="escrosis_logo"
             >
         </head>
+        <hr>
         <body>
             <p>Hello Customer,</p>
             <p>This is to notify you that your escrow transaction has been redeemed!</p>
@@ -23,6 +23,7 @@ const success = ({transactionId,  amount,  status, transactionDate, details}) =>
             <p>Thank you for trusting us, your transaction is in safe hands.</p>
             <p>Warm Regards</p>
         </body>
+        <hr>
         <footer>
             <p><a href="www.escrosispayments.com">www.escrosispayments.com</a></p>
             <img
@@ -32,26 +33,22 @@ const success = ({transactionId,  amount,  status, transactionDate, details}) =>
         </footer>
     </html>`
 
-    const params = {
-        subject: subject,
-        body: body
-    }
-
+    const params = {subject: subject, body: body}
     return params
 }
 
 
 const failed = ({transactionId,  amount,  status, transactionDate, details}) => {
-    const subject = `Your Escrow Transaction Has Failed To Be Cancelled`
+    const subject = `Your Escrow Transaction Has Failed To Be Redeemed`
 
-    const body = `
-        <html>
+    const body = `<html>
             <head>
                 <img
                     src="${process.env.EMAIL_HEADER_BANNER}" 
                     alt="escrosis_logo"
                 >
             </head>
+            <hr>
             <body>
                 <p>Hello Customer,</p>
                 <p>This is to notify you that an escrow transaction failed to be cancelled</p>
@@ -65,6 +62,7 @@ const failed = ({transactionId,  amount,  status, transactionDate, details}) => 
                 <p>Thank you for trusting us, your transaction is in safe hands.</p>
                 <p>Warm Regards</p>
             </body>
+            <hr>
             <footer>
                 <p><a href="www.escrosispayments.com">www.escrosispayments.com</a></p>
                 <img
@@ -74,15 +72,8 @@ const failed = ({transactionId,  amount,  status, transactionDate, details}) => 
             </footer>
         </html>`
 
-    const params = {
-        subject: subject,
-        body: body
-    }
-
+    const params = {subject: subject,body: body}
     return params
 }
 
-module.exports = {
-    success,
-    failed,
-}
+module.exports = {success,failed}

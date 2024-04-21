@@ -17,23 +17,34 @@ transporter.verify((error, success) => {
     }
 })
 
-const sendEmailFunction  = async ({email, transactionId, date, amount, transactionType, details}, res, status, {success, failed}) => {
+const sendEmailFunction  = async (
+    {   email, 
+        transactionId, 
+        redemptionDate, 
+        amount, 
+        transactionType, 
+        details, 
+        secondPartyEmail, 
+        secondLegTransactionId, 
+    }, res, status, {success, failed}) => {
     try {
         if (status == "success"){
+            var recipient = secondPartyEmail ? `${email}, ${secondPartyEmail}` : email;
             var mailOPtions = { 
                 from : process.env.AUTH_EMAIL,
-                to: email,
-                subject: success({email, transactionId, date, amount, transactionType, details}).subject,
-                html: success({email, transactionId, date, amount, transactionType, details}).body,
+                to: recipient,
+                subject: success({email, transactionId, redemptionDate, amount, transactionType, details, status, secondLegTransactionId}).subject,
+                html: success({email, transactionId, redemptionDate, amount, transactionType, details, status, secondLegTransactionId}).body,
             }
         }
 
         if (status == "failed") {
+            var recipient = secondPartyEmail ? `${email}, ${secondPartyEmail}` : email;
             var mailOPtions = { 
                 from : process.env.AUTH_EMAIL,
-                to: email,
-                subject: failed({email, transactionId, date, amount, transactionType, details}).subject,
-                html: failed({email, transactionId, date, amount, transactionType, details}).body,
+                to: recipient,
+                subject: failed({email, transactionId, redemptionDate, amount, transactionType, details, status, secondLegTransactionId}).subject,
+                html: failed({email, transactionId, redemptionDate, amount, transactionType, details, status, secondLegTransactionId}).body,
             }
         }
         await transporter.sendMail(mailOPtions)

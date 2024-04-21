@@ -252,6 +252,7 @@ const generateToken = (data, res, userPassword) => {
 };
 //sign in
 router.post('/signin', (req, res) => {
+    // console.log('i was hit')
     let {email, password} = req.body
 
     email = email.trim()

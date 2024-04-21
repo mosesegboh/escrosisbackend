@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const TransactionSchema = new Schema({
     email: String,
+    phone: String,
     transactionId: String,
     transactionDate: Date,
     amount: Number,
@@ -10,6 +11,10 @@ const TransactionSchema = new Schema({
     date: Date,
     details: String,
     status: String,
+    escrowStatus: {
+        type: String,
+        required: false,
+    },
     balance: { type: Number, default: 0 },
     transactionName: String,
     lockedTransaction:  {
@@ -256,6 +261,14 @@ const TransactionSchema = new Schema({
         type: Array,
         required: false
     },
+    meta: {
+        type: Array,
+        required: false
+    },
+    lastUpdated: {
+        type: Date,
+        required: false 
+    },
     redemptionDate: {
         type: Date,
         required: false
@@ -292,6 +305,7 @@ const TransactionSchema = new Schema({
         type: Date,
         required: false
     }
+
 })
 
 const Transaction = mongoose.model('Transaction', TransactionSchema)

@@ -5,7 +5,7 @@ const success = ({transactionId,  amount,  transactionType, transactionDate, det
     const body = `
     <html>
         <head>
-            <img src="${process.env.EMAIL_TOP_BANNER}">
+            <img src="${process.env.EMAIL_HEADER_BANNER}">
         </head>
         <body>
             <p>Hello there!</p>
@@ -22,8 +22,8 @@ const success = ({transactionId,  amount,  transactionType, transactionDate, det
             <p>Warm Regards</p>
         </body>
         <footer>
-            <p><a href="www.escrosispayments.com">www.escrosispayments.com</a></p>
-            <img src="${process.env.EMAIL_TOP_BANNER}">
+            <p><a href="https://www.escrosispayments.com">www.escrosispayments.com</a></p>
+            <img src="${process.env.EMAIL_FOOTER_BANNER}">
         </footer>
     </html>`
     
@@ -41,7 +41,7 @@ const failed = ({transactionId,  amount,  transactionType, transactionDate, deta
     const body = `
     <html>
         <head>
-            <img src="${process.env.EMAIL_TOP_BANNER}">
+            <img src="${process.env.EMAIL_HEADER_BANNER}">
         </head>
         <body>
             <p>Hello</p>
@@ -57,8 +57,8 @@ const failed = ({transactionId,  amount,  transactionType, transactionDate, deta
             <p><b> Kindly download and install our app on: ${process.env.GOOGLE_PLAYSTORE_URL}</b> to lock and confirm the transaction.</p>
         </body>
         <footer>
-            <p><a href="www.escrosispayments.com">www.escrosispayments.com</a></p>
-            <img src="${process.env.EMAIL_TOP_BANNER}">
+            <p><a href="https://www.escrosispayments.com">www.escrosispayments.com</a></p>
+            <img src="${process.env.EMAIL_FOOTER_BANNER}">
         </footer>
     </html>`
     

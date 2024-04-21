@@ -5,49 +5,45 @@ const {updateParticularCurrencyBalances} = require('../functions/process/index.j
 
 router.post('/feedback', (req, res) => {
    console.log(req.body, 'this is the request body')
-
    const response = req.body
    const transactionId = response.txRef
    const status = response.status
    const eventType = response['event.type']
-//    console.log(response, '---this is web hook---')
-//    console.log(status, '---this is response status---')
-//    console.log(response['event.type'], '---this is event type---')
+    //console.log(response, '---this is web hook---')
     setTimeout(function() {
-        console.log("This message will be displayed after 5 seconds");
-
         Transaction.findOne({ transactionId: transactionId })
-    .then(transaction => {
-        if (transaction) {
-            if (eventType == 'CARD_TRANSACTION' || status == "successful") {
-                transaction.status = "successful";
-                transaction.balance = +transaction.balance + +transaction.amount
-                if ( transaction.balanceForAdditionalCurrencies 
-                    && transaction.balanceForAdditionalCurrencies.length > 0 
-                    && transaction.balanceForAdditionalCurrencies[0] !== 0) {
-                    console.log('i got inside here')
-                    transaction.balanceForAdditionalCurrencies = updateParticularCurrencyBalances(+transaction.amount, process.env.DEFAULT_CURRENCY, transaction.balanceForAdditionalCurrencies)
+        .then(transaction => {
+            if (transaction) {
+                if (eventType == 'CARD_TRANSACTION' || status == "successful") {
+                    transaction.status = "successful";
+                    transaction.balance = +transaction.balance + +transaction.amount
+                    if ( transaction.balanceForAdditionalCurrencies 
+                        && transaction.balanceForAdditionalCurrencies.length > 0 
+                        && transaction.balanceForAdditionalCurrencies[0] !== 0) {
+                        console.log('i got inside here')
+                        transaction.balanceForAdditionalCurrencies = updateParticularCurrencyBalances(+transaction.amount, process.env.DEFAULT_CURRENCY, transaction.balanceForAdditionalCurrencies)
+                    }
                 }
+
+                if (response.event == 'transfer.completed') {
+                    transaction.status = "successful";
+                    transaction.balance = +transaction.balance - +transaction.amount
+                    if ( transaction.balanceForAdditionalCurrencies 
+                        && transaction.balanceForAdditionalCurrencies.length > 0 
+                        && transaction.balanceForAdditionalCurrencies[0] !== 0) {
+                        console.log('i got inside here')
+                        transaction.balanceForAdditionalCurrencies = updateParticularCurrencyBalances(+transaction.amount, process.env.DEFAULT_CURRENCY, transaction.balanceForAdditionalCurrencies)
+                    }
+                }
+                return transaction.save();
+            } else {
+                throw new Error("Transaction not found")
             }
-            console.log(transaction, transaction.balanceForAdditionalCurrencies, '--this is transaction')
-            // else if (transaction.transactionName == "wallet") {
-            //     transaction.balance = +transaction.balance + +transaction.amount
-            // } 
-            // else {
-            //     transaction.status = "failed";
-            //     transaction.balance = +transaction.balance + +transaction.amount
-            // }
-            return transaction.save();
-        } else {
-            throw new Error("Transaction not found")
-        }
-    })
-    .catch(error => {
-        console.log(error)
-    })
-    
-    }, 5000); // 3000 milliseconds = 3 seconds
-    
+        })
+        .catch(error => {
+            console.log(error)
+        })
+    }, 5000);   
 })
 
 module.exports = router

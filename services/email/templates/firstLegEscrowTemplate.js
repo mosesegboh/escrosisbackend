@@ -1,77 +1,70 @@
-const success = ({transactionId,  amount,  transactionType, transactionDate, details}) => {
-        
+const success = ({transactionId,  amount,  transactionType, redemptionDate, details, status}) => {
     const subject = `An Escrow Transaction Has Been Initiated In Your Favour`
-
-    const body = `
-    <html>
-        <head>
-            <img src="../assets/escrosis-logo.png" alt="escrosis_logo">
-        </head>
-        <body>
-            <p>Hello Customer,</p>
-            <p>This is to notify you that an escrow transaction has been initiated in your favour</p>
-            <p>Here are the details of the transaction:</p>
-            <p><b>Transaction ID: ${transactionId}</b></p>
-            <p><b>Amount: ${amount}</b></p>
-            <p><b>Transaction Redemption Date: ${transactionDate}</b></p>
-            <p><b>Transaction Leg: ${transactionType}</b></p>
-            <p><b> Details: ${details}</b></p>
-            <p><b> Kindly download and install our app on: ${process.env.GOOGLE_PLAYSTORE_URL}</b> to lock and confirm the transaction.</p>
-            <p>Thank you for trusting us, your transaction is in safe hands.</p>
-            <p>Warm Regards</p>
-        </body>
-        <footer>
-            <p><a href="www.escrosispayments.com">www.escrosispayments.com</a></p>
-        </footer>
-    </html>
-    `
-    // return [subject, body]
-    const params = {
-        subject: subject,
-        body: body
-    }
-
+    const body = `<html>
+                    <head>
+                        <img src="${process.env.EMAIL_HEADER_BANNER}">
+                    </head>
+                    <hr>
+                    <body>
+                        <p>Hello Customer,</p>
+                        <p>This is to notify you that an escrow transaction has been initiated in your favour</p>
+                        <p>Here are the details of the transaction:</p>
+                        <p><b>Transaction ID: ${transactionId}</b></p>
+                        <p><b>Amount: ${amount}</b></p>
+                        <p><b>Transaction Redemption Date: ${redemptionDate}</b></p>
+                        <p><b>Transaction Leg: ${transactionType}</b></p>
+                        <p><b>Transaction Status: ${status}</b></p>
+                        <p><b> Details: ${details}</b></p>
+                        <p><b> Kindly download and install our app on: <a href="${process.env.GOOGLE_PLAYSTORE_URL}">playstore</a></b>
+                            or <a href="${process.env.APPLE_APP_STORE_URL}">appstore</a> to lock and confirm the transaction.
+                        </p>
+                        <p>Thank you for trusting us, your transaction is in safe hands.</p>
+                        <p>Warm Regards</p>
+                    </body>
+                    <hr>
+                    <footer>
+                        <p><a href="https://www.escrosispayments.com">www.escrosispayments.com</a></p>
+                        <img src="${process.env.EMAIL_FOOTER_BANNER}">
+                    </footer>
+                </html>`
+    const params = {subject: subject,body: body}
     return params
-
 }
 
 
-const failed = ({transactionId,  amount,  transactionType, transactionDate, details}) => {
-    const subject = `An Initiated escrow Transaction Has Failed`
+const failed = ({transactionId,  amount,  transactionType, redemptionDate, details, status}) => {
+    const subject = `An Initiated escrow Transaction Has Failed` 
 
-    const body = `
-        <html>
+    const body = `<html>
             <head>
-                <img src="../assets/escrosis-logo.png" alt="escrosis_logo">
+                <img src="${process.env.EMAIL_HEADER_BANNER}">
             </head>
+            <hr>
             <body>
                 <p>Hello Customer,</p>
                 <p>This is to notify you that an escrow transaction initiated in your favour has failed</p>
                 <p>Here are the details of the transaction:</p>
                 <p><b>Transaction ID: ${transactionId}</b></p>
                 <p><b>Amount: ${amount}</b></p>
-                <p><b>Transaction Redemption Date: ${transactionDate}</b></p>
+                <p><b>Transaction Redemption Date: ${redemptionDate}</b></p>
                 <p><b> Transaction Leg: ${transactionType}</b></p>
+                <p><b>Transaction Status: ${status}</b></p>
                 <p><b> Details: ${details}</b></p>
-                <p><b> Kindly download and install our app on: ${process.env.GOOGLE_PLAYSTORE_URL}</b> to lock and confirm the transaction.</p>
+                <p><b> Kindly download and install our app on: <a href="${process.env.GOOGLE_PLAYSTORE_URL}">playstore</a></b>
+                    or <a href="${process.env.APPLE_APP_STORE_URL}">appstore</a> to lock and confirm the transaction.
+                </p>
                 <p>Thank you for trusting us, your transaction is in safe hands.</p>
                 <p>Warm Regards</p>
             </body>
+            <hr>
             <footer>
-                <p><a href="www.escrosispayments.com">www.escrosispayments.com</a></p>
+                <p><a href="https://www.escrosispayments.com">www.escrosispayments.com</a></p>
+                <img src="${process.env.EMAIL_FOOTER_BANNER}">
             </footer>
-        </html>
-            `
+        </html>`
 
-    const params = {
-        subject: subject,
-        body: body
-    }
-
-    return params
+    const params = {subject: subject,body: body}
+    return params 
 }
 
-module.exports = {
-    success,
-    failed,
-}
+module.exports = {success,failed}

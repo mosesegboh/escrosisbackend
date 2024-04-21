@@ -19,7 +19,7 @@ router.post('/add-transaction',  authMiddleware, authenticateTokenMiddleware, as
     let { transactionName } = req.body 
     // console.log(transactionName, '--transaction name')
     // return
-    if (transactionName == 'transfer') {
+    if (transactionName == 'transfer') {  
         processTransfers( req.body, res)
         return
     }
@@ -49,55 +49,27 @@ router.post('/add-transaction',  authMiddleware, authenticateTokenMiddleware, as
         return
     }
 
-    if (receivepayments == 'receivepayments') {
+    if (transactionName == 'receivepayments') {
         processPayments(req.body, res)
         return
     }
 
-    if (receivepayments == 'redeemEscrow') {
+    if (transactionName == 'redeemEscrow') {
         processRedeemTransactionImmediate(req.body, res)
         return
     }
 
-    if (receivepayments == 'cancelEscrow') {
+    if (transactionName == 'cancelEscrow') {
         processCancelTransactionImmediate(req.body, res)
         return
     }
 })
 
-router.post('/test-api', (req, res) => {
-
-    if (req.query.module = 'airtime-success') {
-        console.log('i was here ppp')
-        return res.json({
-            "status": "success",
-            "message": "Bill status fetch successful",
-            "data": {
-                "currency": "NGN",
-                "customer_id": "2348109728098",
-                "frequency": "One Time",
-                "amount": "500.0000",
-                "product": "AIRTIME",
-                "product_name": "MTN",
-                "commission": 15,
-                "transaction_date": "2022-06-07T10:59:40.72Z",
-                "country": "NG",
-                "tx_ref": "CF-FLYAPI-20220607105940408290", 
-                "extra": null,
-                "product_details": "FLY-API-NG-AIRTIME-MTN",
-                "status": "successful",
-                "code": "200"
-            }
-        })
-        
-    }
-})
-
 router.post('/get-transactions', authMiddleware, authenticateTokenMiddleware, (req, res) => {
-    // console.log('i was here')
+    // console.log('i was hit ooooooooooooo!!!!!!!!!')   
     if (req.query.searchSecondLeg) {
         // console.log('i was here')
-        processSearchSecondLeg(req.query.searchSecondLeg, res)
+        processSearchSecondLeg(req.query.searchSecondLeg, res) 
         return
     }
     
@@ -114,7 +86,7 @@ router.post('/get-transactions', authMiddleware, authenticateTokenMiddleware, (r
             message: "Empty credentials"
         })
     } else {
-        Transaction.countDocuments({ email }).then(totalCount => {
+        Transaction.countDocuments({ email }).then(totalCount => {   
             Transaction.find({email})
             .skip((page - 1) * limit) // Skip the previous pages' data
             .limit(limit) // Limit the number of results
@@ -179,6 +151,34 @@ router.get('/get-transaction', authMiddleware, authenticateTokenMiddleware, (req
                 message: "An error has occurred"
             })
         })
+    }
+})
+
+router.post('/test-api', (req, res) => {
+
+    if (req.query.module = 'airtime-success') {
+        console.log('i was here ppp')
+        return res.json({
+            "status": "success",
+            "message": "Bill status fetch successful",
+            "data": {
+                "currency": "NGN",
+                "customer_id": "2348109728098",
+                "frequency": "One Time",
+                "amount": "500.0000",
+                "product": "AIRTIME",
+                "product_name": "MTN",
+                "commission": 15,
+                "transaction_date": "2022-06-07T10:59:40.72Z",
+                "country": "NG",
+                "tx_ref": "CF-FLYAPI-20220607105940408290", 
+                "extra": null,
+                "product_details": "FLY-API-NG-AIRTIME-MTN",
+                "status": "successful",
+                "code": "200"
+            }
+        })
+        
     }
 })
 

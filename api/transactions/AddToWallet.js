@@ -8,7 +8,7 @@ router.post('/add-to-wallet',  authMiddleware.authMiddleware, authenticateTokenM
     let {email, transactionId, transactionDate, amount, walletBalance} = req.body
 
     email = email.trim()
-    transactionDate = transactionDate.trim()
+    transactionDate = transactionDate.trim() 
     transactionId = transactionId.trim()
     amount = amount.trim()
     walletBalance = walletBalance.trim()
