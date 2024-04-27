@@ -299,7 +299,7 @@ router.post('/signin', (req, res) => {
                                 // res.token = token;
                             data[0].token = token;
 
-                            console.log(data[0]);
+                            // console.log(data[0]);
                             res.json({
                                 // token,
                                 status: "SUCCESS",

@@ -13,16 +13,16 @@ const processTransfers = async (data, res) => {
         details, 
         transactionName,
         transactFromWallet,
-        accountNumber,
-        accountBank,
+        account_number,
+        account_bank,
         currency,
         reference,
-        callbackUrl,
-        debitCurrency,
+        callback_url,
+        debit_currency,
         transferType
     } = data
 
-    const userCurrentDetails = await getCurrentUserDetails(data)
+    const userCurrentDetails = await getCurrentUserDetails(data, undefined, 1, undefined);
 
     var {  currentBalance } = userCurrentDetails
 
@@ -38,19 +38,19 @@ const processTransfers = async (data, res) => {
         date: date,
         details: details,
         transactFromWallet: transactFromWallet,
-        accountNumber: accountNumber,
-        accountBank: accountBank,
+        accountNumber: account_number,
+        accountBank: account_bank,
         currency: currency,
         reference: reference,
-        callbackUrl: callbackUrl,
-        debitCurrency: debitCurrency,
+        callbackUrl: callback_url,
+        debitCurrency: debit_currency,
         status: 'pending',
 
-        ...((transferType == "isGUZT") ? { destination_branch_code: data.branchCode, beneficiary_name: data.beneficiaryName } : {}),
+        ...((transferType === "isGUZT") ? { destination_branch_code: data.branchCode, beneficiary_name: data.beneficiaryName } : {}),
 
-        ...((transferType = "isLocalDomiciliaryAndIsFcmbOrIsUsdOrIsEur") ? { beneficiary_name: data.beneficiaryName } : {}),
+        ...((transferType === "isLocalDomiciliaryAndIsFcmbOrIsUsdOrIsEur") ? { beneficiary_name: data.beneficiaryName } : {}),
 
-        ...((transferType = "isLocalDomiciliary") ? { meta: [{
+        ...((transferType === "isLocalDomiciliary") ? { meta: [{
             first_name: data.beneficiaryFirstName,
             last_name: data.beneficiaryLastName,
             email: data.beneficiaryEmail,
@@ -60,7 +60,7 @@ const processTransfers = async (data, res) => {
             merchant_name: data.merchantName
           }] } : {}),
         //additional meta fields for international transfers
-        ...((transferType == "isLocalDomiciliaryandisFcmbDorm") ? { meta: [{
+        ...((transferType === "isLocalDomiciliaryandisFcmbDorm") ? { meta: [{
             beneficiaryEmail: data.beneficiaryEmail,
             beneficiary_country: data.beneficiaryCountry,
             beneficiary_occupation: data.beneficiaryOccupation,
@@ -78,7 +78,7 @@ const processTransfers = async (data, res) => {
             transfer_purpose: data.transferPurpose
         }] } : {}),
 
-        ...(transferType = "isUsdAccount" ? { meta: [{
+        ...(transferType === "isUsdAccount" ? { meta: [{
             AccountNumber: data.inputValueAccount,
             RoutingNumber: data.routingNumber,
             SwiftCode: data.swiftCode,
@@ -88,7 +88,7 @@ const processTransfers = async (data, res) => {
             BeneficiaryCountry: data.beneficiaryCountry,
           }]} : {}),
 
-        ...(transferType == "isEurGbp" ? { meta: [{
+        ...(transferType === "isEurGbp" ? { meta: [{
             AccountNumber: data.inputValueAccount,
             RoutingNumber: data.routingNumber,
             SwiftCode: data.swiftCode,
@@ -101,13 +101,13 @@ const processTransfers = async (data, res) => {
             City: data.beneficiaryCity
         }]} : {}),
 
-        ...(transferType == "isKesAccount" ? { meta: [{
+        ...(transferType === "isKesAccount" ? { meta: [{
             sender: data.sender,
             sender_country: data.senderCountry,
             mobile_number: data.senderMobile
         }]} : {}),
 
-        ...(isZarAccount == 'isZarAccount' ? { meta: [{
+        ...(transferType === 'isZarAccount' ? { meta: [{
             first_name: data.beneficiaryFirstName,
             last_name: data.beneficiaryLastName,
             email: data.beneficiaryEmail,
@@ -116,10 +116,11 @@ const processTransfers = async (data, res) => {
         }]} : {}),
 
     };
-    console.log(update,'---this is update')
-    return;
+    // console.log(update,'---this is update') 
+    // return;
 
-    saveTransaction(filter, update, data, res, "directsave")
+    // saveTransaction(filter, update, data, res, "directsave")
+    saveTransaction(undefined, update, data, res, "directsave")
 }
 
 module.exports = {processTransfers}  

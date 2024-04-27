@@ -7,6 +7,7 @@ const secondLegEscrowTemplate = require('../../services/email/templates/secondLe
 const paymentTemplate = require('../../services/email/templates/paymentTemplate')
 const cancelTransactionTemplate = require('../../services/email/templates/cancelledTransactionTemplate')
 const redeemTransactionTemplate = require('../../services/email/templates/redeemTransactionTemplate')
+const transferTemplate = require('../../services/email/templates/transferTemplate')
 
 const getCurrentUserDetails = async ({email, amount, transactFromWallet, transactionType }, 
     sortOrder=-1, limit=2, getBy={email: email}, res = "") => {
@@ -115,7 +116,8 @@ const saveTransaction = async (filter = {}, update, data, res = {}, directSave =
                     "billPayment": billPaymentTemplate,
                     "FirstLeg": firstLegEscrowTemplate,
                     "SecondLeg": secondLegEscrowTemplate,
-                    "receivepayments": paymentTemplate
+                    "receivepayments": paymentTemplate,
+                    "transfer": transferTemplate
                 };
             
                 let relevantTemplate = templates[result.transactionName] || templates[result.transactionType] || '';
@@ -136,7 +138,8 @@ const saveTransaction = async (filter = {}, update, data, res = {}, directSave =
                 "billPayment": billPaymentTemplate,
                 "FirstLeg": firstLegEscrowTemplate,
                 "SecondLeg": secondLegEscrowTemplate,
-                "receivepayments": paymentTemplate
+                "receivepayments": paymentTemplate,
+                "transfer": transferTemplate
             };
         
             let relevantTemplate = templates[data.transactionName] || templates[data.transactionType] || '';

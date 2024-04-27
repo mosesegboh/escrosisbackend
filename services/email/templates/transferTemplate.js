@@ -1,33 +1,68 @@
-const transferSuccess = ({email, transactionId,  amount,  transactionType, transactionDate, details}) => {
-    const subject = `Your Transfer is successful`
+const success = ({transactionId,  amount,  transactionType, details, status}) => {
+    const subject = `Your Transfer Has Been Initiated`
 
-    const body = `<p>Hello Client,</p>
-    <p>You have successfully added funds to your account.</p>
-    <p>The details of the transaction is below:</p>
-    <p><b>Transaction ID: ${transactionId}</b></p>
-    <p><b>Amount: ${amount}</b></p>
-    <p><b>Transaction Date: ${transactionDate}</b></p>
-    <p><b> Details: ${details}</b></p>
-    <p>Thank You for transacting with us</p>
-    <p>Warm Regards</p>`
-    
-    return [subject, body]
+    const body = `<html>
+        <head>
+            <img src="${process.env.EMAIL_HEADER_BANNER}">
+        </head>
+        <hr>
+        <body>
+            <p>Hello Customer,</p>
+            <p>This is to notify you that a transfer has been initiated in your favour</p>
+            <p>Here are the details of the transaction:</p>
+            <p><b>Transaction ID: ${transactionId}</b></p>
+            <p><b>Amount: ${amount}</b></p>
+            <p><b>Transaction Leg: ${transactionType}</b></p>
+            <p><b>Transaction Status: ${status}</b></p>
+            <p><b> Details: ${details}</b></p>
+            <p><b> Kindly download and install our app on: <a href="${process.env.GOOGLE_PLAYSTORE_URL}">playstore</a></b>
+                or <a href="${process.env.APPLE_APP_STORE_URL}">appstore</a> to lock and confirm the transaction.
+            </p>
+            <p>Thank you for trusting us, your transaction is in safe hands.</p>
+            <p>Warm Regards</p>
+        </body>
+        <hr>
+        <footer>
+            <p><a href="https://www.escrosispayments.com">www.escrosispayments.com</a></p>
+            <img src="${process.env.EMAIL_FOOTER_BANNER}">
+        </footer>
+    </html>`
+    const params = {subject: subject,body: body}
+    return params
 }
 
- const transferFailed = ({email, transactionId,  amount,  transactionType, transactionDate, details}) => {
-    const subject = `Your Transfer is successful`
+const failed = ({transactionId,  amount,  transactionType, details, status}) => {
+    const subject = `Your Transfer Has Failed` 
 
-    const body = `<p>Hello There!</p>
-    <p>Sadly, your addition to wallet transaction failed.</p>
-    <p>The details of the transaction is below:</p>
-    <p><b>Transaction ID: ${transactionId}</b></p>
-    <p><b>Amount: ${amount}</b></p>
-    <p><b>Transaction Date: ${transactionDate}</b></p>
-    <p><b> Details: ${details}</b></p>
-    <p>Kindly try again later</p>
-    <p>Warm Regards</p>`
-    
-    return [subject, body]
+    const body = `<html>
+            <head>
+                <img src="${process.env.EMAIL_HEADER_BANNER}">
+            </head>
+            <hr>
+            <body>
+                <p>Hello Customer,</p>
+                <p>This is to notify you that your transfer transaction has failed</p>
+                <p>Here are the details of the transaction:</p>
+                <p><b>Transaction ID: ${transactionId}</b></p>
+                <p><b>Amount: ${amount}</b></p>
+                <p><b> Transaction Leg: ${transactionType}</b></p>
+                <p><b>Transaction Status: ${status}</b></p>
+                <p><b> Details: ${details}</b></p>
+                <p><b> Kindly download and install our app on: <a href="${process.env.GOOGLE_PLAYSTORE_URL}">playstore</a></b>
+                    or <a href="${process.env.APPLE_APP_STORE_URL}">appstore</a> to lock and confirm the transaction.
+                </p>
+                <p>Thank you for trusting us, your transaction is in safe hands.</p>
+                <p>Warm Regards</p>
+            </body>
+            <hr>
+            <footer>
+                <p><a href="https://www.escrosispayments.com">www.escrosispayments.com</a></p>
+                <img src="${process.env.EMAIL_FOOTER_BANNER}">
+            </footer>
+        </html>`
+
+    const params = {subject: subject,body: body}
+    return params 
 }
 
-module.exports = {transferSuccess, transferFailed}   
+module.exports = {success,failed} 
