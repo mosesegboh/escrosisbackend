@@ -1,0 +1,46 @@
+2024-04-27T14:00:08.521Z - {
+  "event.type": "Transfer",
+  "transfer": {
+    "id": 625962,
+    "account_number": "0690000032",
+    "bank_code": "044",
+    "fullname": "Pastor Bright",
+    "date_created": "2024-04-27T13:58:48.000Z",
+    "currency": "NGN",
+    "debit_currency": "NGN",
+    "amount": 100,
+    "fee": 10.75,
+    "status": "SUCCESSFUL",
+    "reference": "9ARC6JJ4IC_PMCKDU_1",
+    "meta": null,
+    "narration": "shoes",
+    "approver": null,
+    "complete_message": "Successful",
+    "requires_approval": 0,
+    "is_approved": 1,
+    "bank_name": "ACCESS BANK NIGERIA"
+  }
+}
+2024-04-27T14:03:04.452Z - {
+  "event.type": "Transfer",
+  "transfer": {
+    "id": 625963,
+    "account_number": "0690000032",
+    "bank_code": "044",
+    "fullname": "Pastor Bright",
+    "date_created": "2024-04-27T14:01:39.000Z",
+    "currency": "NGN",
+    "debit_currency": "NGN",
+    "amount": 100,
+    "fee": 10.75,
+    "status": "SUCCESSFUL",
+    "reference": "LI3X9I5AER_PMCKDU_1",
+    "meta": null,
+    "narration": "shoes",
+    "approver": null,
+    "complete_message": "Successful",
+    "requires_approval": 0,
+    "is_approved": 1,
+    "bank_name": "ACCESS BANK NIGERIA"
+  }
+}

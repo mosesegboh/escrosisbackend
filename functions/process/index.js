@@ -8,6 +8,8 @@ const paymentTemplate = require('../../services/email/templates/paymentTemplate'
 const cancelTransactionTemplate = require('../../services/email/templates/cancelledTransactionTemplate')
 const redeemTransactionTemplate = require('../../services/email/templates/redeemTransactionTemplate')
 const transferTemplate = require('../../services/email/templates/transferTemplate')
+const fs = require('fs');
+const path = require('path');
 
 const getCurrentUserDetails = async ({email, amount, transactFromWallet, transactionType }, 
     sortOrder=-1, limit=2, getBy={email: email}, res = "") => {
@@ -109,7 +111,8 @@ const saveTransaction = async (filter = {}, update, data, res = {}, directSave =
             if (result) { 
                 // console.log(result, '--result')
                 // return
-                const status = "success";
+                // var status = "success";
+                var status = result.transactionType == "transfer" ? "pending" : "success";
 
                 const templates = {
                     "wallet": walletTemplate,
@@ -349,14 +352,43 @@ async function cancelTransaction(transaction, res) {
             }
         }).catch(err => console.error('Bulk update error:', err)); 
     }
-
-   
 }
+
+// function log(message) {
+//     const timestamp = new Date().toISOString();
+//     fs.appendFile('server.log', `${timestamp} - ${message}\n`, (err) => {
+//         if (err) {
+//             console.error('Failed to write to log file:', err);
+//         }
+//     });
+// }
+
+/**
+ * Logs data to a log file with a timestamp.
+ * @param {any} data - Data to be logged.
+ */
+function log(data) {
+    const filePath = path.join(__dirname, 'app.log'); // Log file path
+    const timestamp = new Date().toISOString(); // ISO format timestamp
+
+    // Check if the data is an object and convert it to string if it is
+    const logMessage = typeof data === 'object' ? JSON.stringify(data, null, 2) : data;
+
+    // Append log message to file with a timestamp
+    fs.appendFile(filePath, `${timestamp} - ${logMessage}\n`, (err) => {
+        if (err) {
+            console.error('Failed to write to log file:', err);
+        }
+    });
+}
+
+
 
 module.exports = {
     saveTransaction, 
     getCurrentUserDetails, 
     updateParticularCurrencyBalances, 
     redeemTransaction,
-    cancelTransaction
+    cancelTransaction,
+    log
 }  

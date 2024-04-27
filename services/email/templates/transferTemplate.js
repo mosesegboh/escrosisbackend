@@ -1,5 +1,5 @@
 const success = ({transactionId,  amount,  transactionType, details, status}) => {
-    const subject = `Your Transfer Has Been Initiated`
+    const subject = status == 'success' ? `Your Transfer Is Successful` : `Your Transfer Has Been Initiated`
 
     const body = `<html>
         <head>
@@ -8,7 +8,7 @@ const success = ({transactionId,  amount,  transactionType, details, status}) =>
         <hr>
         <body>
             <p>Hello Customer,</p>
-            <p>This is to notify you that a transfer has been initiated in your favour</p>
+            <p>${status == 'success' ? 'This is to notify you that your transfer is now successful' : 'This is to notify you that a transfer has been initiated in your favour'}</p>
             <p>Here are the details of the transaction:</p>
             <p><b>Transaction ID: ${transactionId}</b></p>
             <p><b>Amount: ${amount}</b></p>

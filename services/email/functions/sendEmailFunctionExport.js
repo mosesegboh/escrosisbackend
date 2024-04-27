@@ -28,7 +28,7 @@ const sendEmailFunction  = async (
         secondLegTransactionId, 
     }, res, status, {success, failed}) => {
     try {
-        if (status == "success"){
+        if (status == "success" || status == "pending"){
             var recipient = secondPartyEmail ? `${email}, ${secondPartyEmail}` : email;
             var mailOPtions = { 
                 from : process.env.AUTH_EMAIL,

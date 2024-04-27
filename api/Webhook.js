@@ -2,25 +2,29 @@ const express = require('express')
 const router = express.Router()
 const Transaction = require('./../models/Transaction')
 const {updateParticularCurrencyBalances} = require('../functions/process/index.js')
-const {success,failed} = require('../services/email/templates/transferTemplate')
+const transferTemplate = require('../services/email/templates/transferTemplate')
 const {sendEmailFunction} = require('../services/email/functions/sendEmailFunctionExport')
+const {log} = require('../functions/process/index.js')
 
 router.post('/feedback', (req, res) => {
-    // If you specified a secret hash, check for the signature
     const secretHash = process.env.FLW_SECRET_HASH;
     const signature = req.headers["verif-hash"];
     if (!signature || (signature !== secretHash)) {
-        // This request isn't from Flutterwave; discard
         res.status(401).end();
     }
-   console.log(req.body, 'this is the request body')
+   console.log(req.body, '-----this is the request body')
    const response = req.body
    const transactionId = response.txRef
    const status = response.status
    const eventType = response['event.type']
-    //console.log(response, '---this is web hook---')
+   const transferTransactionIdId = response.transfer.reference
+    // console.log(response.transfer.status, '---this is web hook---')
+    // return
     setTimeout(function() {
-        Transaction.findOne({ transactionId: transactionId })
+        Transaction.findOne({ 
+            transactionId : eventType == 'Transfer' ? transferTransactionIdId 
+            : transactionId
+        })
         .then(transaction => {
             if (transaction && (transaction.status !== "complete" || transaction.status !== "successful")) {
                 if (eventType == 'CARD_TRANSACTION' || status == "successful") {
@@ -34,26 +38,30 @@ router.post('/feedback', (req, res) => {
                     }
                 }
 
-                if (response.event == 'transfer.completed') {
-                    transaction.status = "successful";
-                    transaction.balance = +transaction.balance - +transaction.amount
-                    sendEmailFunction(transaction, res, "successful", success)
-
-                    if ( transaction.balanceForAdditionalCurrencies 
-                        && transaction.balanceForAdditionalCurrencies.length > 0 
-                        && transaction.balanceForAdditionalCurrencies[0] !== 0) {
-                        console.log('i got inside here')
-                        transaction.balanceForAdditionalCurrencies = updateParticularCurrencyBalances(+transaction.amount, process.env.DEFAULT_CURRENCY, transaction.balanceForAdditionalCurrencies)
+                if (eventType == 'Transfer') {
+                    if (response.transfer.status == 'SUCCESSFUL') {
+                        transaction.status = "complete";
+                        transaction.balance = +transaction.balance - +transaction.amount
+                        sendEmailFunction(transaction, res, "success", transferTemplate)
+    
+                        if ( transaction.balanceForAdditionalCurrencies 
+                            && transaction.balanceForAdditionalCurrencies.length > 0 
+                            && transaction.balanceForAdditionalCurrencies[0] !== 0) {
+                            // console.log('i got inside here')
+                            transaction.balanceForAdditionalCurrencies = updateParticularCurrencyBalances(+transaction.amount, process.env.DEFAULT_CURRENCY, transaction.balanceForAdditionalCurrencies)
+                        }
+                    }else{
+                        transaction.status = "failed";
+                        //send transaction failed email
+                        sendEmailFunction(transaction, res, "failed", transferTemplate)
+    
                     }
-                }else{
-                    transaction.status = "failed";
-                    //send transaction failed email
-                    sendEmailFunction(transaction, res, "failed", failed)
-
+                    transaction.save();
                 }
-                return transaction.save();
+ 
             } else {
-                throw new Error("Transaction not found")
+                // throw new Error("Transaction not found")
+                console.log("Transaction not found or transaction already completed !!!")
             }
 
         })
@@ -62,7 +70,7 @@ router.post('/feedback', (req, res) => {
         })
     }, 5000);  
      // It's a good idea to log all received events.
-     console.log(payload);
+     log(response);
      // Do something (that doesn't take too long) with the payload 
     res.status(200).end()
 })
