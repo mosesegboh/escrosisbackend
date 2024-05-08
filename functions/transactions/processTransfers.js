@@ -1,5 +1,5 @@
 const validation = require('../validation/validateData')
-const {saveTransaction, getCurrentUserDetails} = require('../process')
+const {saveTransaction, getCurrentUserDetails, collectFees} = require('../process')
 
 const processTransfers = async (data, res) => {
 
@@ -116,11 +116,9 @@ const processTransfers = async (data, res) => {
         }]} : {}),
 
     };
-    // console.log(update,'---this is update') 
+    // console.log(await collectFees(data),'---this is update') 
     // return;
-
-    // saveTransaction(filter, update, data, res, "directsave")
-    saveTransaction(undefined, update, data, res, "directsave")
+    saveTransaction(undefined, update, await collectFees(data), res, "directsave")
 }
 
 module.exports = {processTransfers}  

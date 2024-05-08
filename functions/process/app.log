@@ -44,3 +44,163 @@
     "bank_name": "ACCESS BANK NIGERIA"
   }
 }
+2024-05-06T19:30:47.897Z - {
+  "event.type": "Transfer",
+  "transfer": {
+    "id": 626942,
+    "account_number": "FOREIGN-ACCOUNT",
+    "bank_code": "FOREIGN-BANK",
+    "fullname": "Flutterwave Developers",
+    "date_created": "2024-05-06T19:20:33.000Z",
+    "currency": "USD",
+    "debit_currency": null,
+    "amount": 50,
+    "fee": 40,
+    "status": "SUCCESSFUL",
+    "reference": "test-transfer-test1",
+    "meta": [
+      {
+        "AccountNumber": "09182972BH",
+        "RoutingNumber": "0000000002993",
+        "SwiftCode": "ABJG190",
+        "BankName": "BANK OF AMERICA, N.A., SAN FRANCISCO, CA",
+        "BeneficiaryName": "Flutterwave Developers",
+        "BeneficiaryAddress": "San Francisco, 4 Newton",
+        "BeneficiaryCountry": "US",
+        "MerchantName": "MOSESonline.net",
+        "SenderCountry": "NG",
+        "Sender": "MOSESonline.net",
+        "Address": "San Francisco, 4 Newton",
+        "MobileNumber": "23480000000000",
+        "SenderAddress": null,
+        "SenderMobileNumber": null
+      }
+    ],
+    "narration": "Sample USD Transfer",
+    "approver": null,
+    "complete_message": "Successful",
+    "requires_approval": 0,
+    "is_approved": 1,
+    "bank_name": "FA-BANK"
+  }
+}
+2024-05-07T08:16:17.658Z - {
+  "event.type": "Transfer",
+  "transfer": {
+    "id": 626966,
+    "account_number": "FOREIGN-ACCOUNT",
+    "bank_code": "FOREIGN-BANK",
+    "fullname": "Flutterwave Developers",
+    "date_created": "2024-05-07T08:05:59.000Z",
+    "currency": "USD",
+    "debit_currency": null,
+    "amount": 50,
+    "fee": 40,
+    "status": "SUCCESSFUL",
+    "reference": "test-transfer-test2",
+    "meta": [
+      {
+        "AccountNumber": "09182972BH",
+        "RoutingNumber": "0000000002993",
+        "SwiftCode": "ABJG190",
+        "BankName": "CHASE",
+        "BeneficiaryName": "Flutterwave Developers",
+        "BeneficiaryAddress": "California",
+        "BeneficiaryCountry": "US",
+        "MerchantName": "MOSESonline.net",
+        "SenderCountry": "NG",
+        "Sender": "MOSESonline.net",
+        "Address": "California",
+        "MobileNumber": "23480000000000",
+        "SenderAddress": null,
+        "SenderMobileNumber": null
+      }
+    ],
+    "narration": "Sample USD Transfer",
+    "approver": null,
+    "complete_message": "Successful",
+    "requires_approval": 0,
+    "is_approved": 1,
+    "bank_name": "FA-BANK"
+  }
+}
+2024-05-07T08:17:05.840Z - {
+  "event.type": "Transfer",
+  "transfer": {
+    "id": 626967,
+    "account_number": "FOREIGN-ACCOUNT",
+    "bank_code": "FOREIGN-BANK",
+    "fullname": "Flutterwave Developers",
+    "date_created": "2024-05-07T08:06:47.000Z",
+    "currency": "USD",
+    "debit_currency": null,
+    "amount": 50,
+    "fee": 40,
+    "status": "SUCCESSFUL",
+    "reference": "test-transfer-test6",
+    "meta": [
+      {
+        "AccountNumber": "09182972BH",
+        "RoutingNumber": "0000000002993",
+        "SwiftCode": "ABJG190",
+        "BankName": "BANK OF AMERICA, N.A., SAN FRANCISCO, CA",
+        "BeneficiaryName": "Flutterwave Developers",
+        "BeneficiaryAddress": "San Francisco",
+        "BeneficiaryCountry": "US",
+        "MerchantName": "MOSESonline.net",
+        "SenderCountry": "NG",
+        "Sender": "MOSESonline.net",
+        "Address": "San Francisco",
+        "MobileNumber": "23480000000000",
+        "SenderAddress": null,
+        "SenderMobileNumber": null
+      }
+    ],
+    "narration": "Sample USD Transfer",
+    "approver": null,
+    "complete_message": "Successful",
+    "requires_approval": 0,
+    "is_approved": 1,
+    "bank_name": "FA-BANK"
+  }
+}
+2024-05-07T08:17:44.887Z - {
+  "event.type": "Transfer",
+  "transfer": {
+    "id": 626968,
+    "account_number": "FOREIGN-ACCOUNT",
+    "bank_code": "FOREIGN-BANK",
+    "fullname": "Flutterwave Developers",
+    "date_created": "2024-05-07T08:07:27.000Z",
+    "currency": "USD",
+    "debit_currency": null,
+    "amount": 50,
+    "fee": 40,
+    "status": "SUCCESSFUL",
+    "reference": "test-transfer-test9",
+    "meta": [
+      {
+        "AccountNumber": "09182972BH",
+        "RoutingNumber": "0000000002993",
+        "SwiftCode": "ABJG190",
+        "BankName": "BANK OF AMERICA",
+        "BeneficiaryName": "Flutterwave Developers",
+        "BeneficiaryAddress": "San Francisco",
+        "BeneficiaryCountry": "US",
+        "MerchantName": "MOSESonline.net",
+        "SenderCountry": "NG",
+        "Sender": "MOSESonline.net",
+        "Address": "San Francisco",
+        "MobileNumber": "23480000000000",
+        "SenderAddress": null,
+        "SenderMobileNumber": null
+      }
+    ],
+    "narration": "Sample USD Transfer",
+    "approver": null,
+    "complete_message": "Successful",
+    "requires_approval": 0,
+    "is_approved": 1,
+    "bank_name": "FA-BANK"
+  }
+}

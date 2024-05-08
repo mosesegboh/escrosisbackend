@@ -1,4 +1,6 @@
 const Transaction = require('../../models/Transaction')
+const ServiceFee = require('../../models/ServiceFee')
+const TransactionFee = require('../../models/TransactionFee')
 const {sendEmailFunction} = require('../../services/email/functions/sendEmailFunctionExport')
 const walletTemplate = require('../../services/email/templates/walletTemplate')
 const billPaymentTemplate = require('../../services/email/templates/billPaymentTemplate')
@@ -81,10 +83,7 @@ const saveTransaction = async (filter = {}, update, data, res = {}, directSave =
             message: "Transaction is already locked"
         })
     }
-
     // console.log(multi, '----transaction')
-    //         return
-
     if (multi !== undefined) {
         try {
             // console.log(multi.firstKey, 'i am inside here')
@@ -354,14 +353,48 @@ async function cancelTransaction(transaction, res) {
     }
 }
 
-// function log(message) {
-//     const timestamp = new Date().toISOString();
-//     fs.appendFile('server.log', `${timestamp} - ${message}\n`, (err) => {
-//         if (err) {
-//             console.error('Failed to write to log file:', err);
-//         }
-//     });
-// }
+async function collectFees(data) {
+
+    if (!data.shouldCharge)  {
+        return data
+    }
+    let updatedAmountLesServiceFee = +data.amount - +data.serviceFee - +data.transactionFee
+
+    const latestServiceEntry = await ServiceFee.findOne().sort({ transactionDate: -1 })
+    const balance = latestServiceEntry ? latestServiceEntry.balance : 0
+    // console.log((+latestServiceEntry ? +latestServiceEntry.balance : +0)); return
+    const serviceFee = new ServiceFee({
+        transacitonType: data.transactionType,
+        email: data.email,
+        amount: data.serviceFee,
+        reference: data.reference,
+        currency: data.currency,
+        balance: +data.serviceFee + +balance,
+        transactionDate: new Date(),
+    })
+    serviceFee.save()
+    .then(result => {/*console.log("saved") */})
+    .catch(err => console.error( err));
+
+    const latestTransactionEntry = await TransactionFee.findOne().sort({ transactionDate: -1 });
+    const balanceTransaction = latestTransactionEntry ? latestTransactionEntry.balance : 0
+    const transactionFee = new TransactionFee({
+        transacitonType: data.transactionType,
+        email: data.email,
+        amount: data.transactionFee,
+        reference: data.reference,
+        currency: data.currency,
+        balance: +data.transactionFee + balanceTransaction,
+        transactionDate: new Date(),
+    })
+    transactionFee.save()
+    .then(result => { /*console.log('saved') */})
+    .catch(err => console.error( err));
+    
+    data.amount = updatedAmountLesServiceFee
+
+    return data
+}
 
 /**
  * Logs data to a log file with a timestamp.
@@ -382,13 +415,12 @@ function log(data) {
     });
 }
 
-
-
 module.exports = {
     saveTransaction, 
     getCurrentUserDetails, 
     updateParticularCurrencyBalances, 
     redeemTransaction,
     cancelTransaction,
-    log
+    log,
+    collectFees
 }  
