@@ -204,3 +204,4491 @@
     "bank_name": "FA-BANK"
   }
 }
+2024-07-12T11:55:58.918Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T11:55:58.920Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T11:58:21.167Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T11:58:21.168Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T11:59:20.612Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T11:59:20.613Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:00:12.030Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:00:12.031Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:00:49.272Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:00:49.274Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:09:03.262Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:09:03.264Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:11:55.513Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:11:55.514Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:12:33.856Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:12:33.858Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:14:33.687Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:14:33.687Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:16:17.620Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:16:17.620Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:17:48.895Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:17:48.895Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:18:21.510Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:18:21.511Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:22:54.586Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:22:54.586Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:25:43.987Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:25:43.989Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:33:16.566Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:33:16.567Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:33:52.658Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:33:52.659Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:40:30.932Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:40:30.932Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:46:00.876Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:46:00.877Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:53:32.418Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:53:32.419Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:56:25.223Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T12:56:25.223Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T13:29:20.966Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T13:29:20.966Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T13:29:59.157Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-12T13:29:59.157Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240712110148580301615",
+    "flw_ref": "BPUSSD1720782111176370",
+    "batch_reference": null,
+    "customer_reference": "51C1CZQGZM",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-13T17:44:51.386Z - {
+  "id": 5950552,
+  "txRef": "UQWIYYKUBO",
+  "flwRef": "FLW-MOCK-328534c95bfeb884f4eccf0b4cc17e16",
+  "orderRef": "URF_1720892676878_8333435",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-13T17:44:37.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "52.209.154.143",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2448912,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-13T17:44:37.000Z",
+    "updatedAt": "2024-07-13T17:44:37.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-13T17:44:51.387Z - {
+  "id": 5950552,
+  "txRef": "UQWIYYKUBO",
+  "flwRef": "FLW-MOCK-328534c95bfeb884f4eccf0b4cc17e16",
+  "orderRef": "URF_1720892676878_8333435",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-13T17:44:37.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "52.209.154.143",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2448912,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-13T17:44:37.000Z",
+    "updatedAt": "2024-07-13T17:44:37.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-13T17:44:58.555Z - Transaction not found or transaction already completed !!!
+2024-07-13T17:50:36.796Z - {
+  "id": 5945855,
+  "txRef": "YPD29LU5QN",
+  "flwRef": "FLW-MOCK-509a03d116513d49e3f3e32ff75a3566",
+  "orderRef": "URF_1720885810822_8099635",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-13T15:50:11.000Z",
+  "amount": 1000,
+  "charged_amount": 1000,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 38,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2448881,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-13T15:50:11.000Z",
+    "updatedAt": "2024-07-13T15:50:11.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  }
+}
+2024-07-13T17:50:36.796Z - {
+  "id": 5945855,
+  "txRef": "YPD29LU5QN",
+  "flwRef": "FLW-MOCK-509a03d116513d49e3f3e32ff75a3566",
+  "orderRef": "URF_1720885810822_8099635",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-13T15:50:11.000Z",
+  "amount": 1000,
+  "charged_amount": 1000,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 38,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2448881,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-13T15:50:11.000Z",
+    "updatedAt": "2024-07-13T15:50:11.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  }
+}
+2024-07-13T17:50:43.908Z - Transaction not found or transaction already completed !!!
+2024-07-14T17:13:35.925Z - {
+  "id": 6008653,
+  "txRef": "XTVQXCS2TP",
+  "flwRef": "FLW-MOCK-6f7fd309ed6267ddf96b03f7b921baf1",
+  "orderRef": "URF_1720977196213_4533535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-14T17:13:16.000Z",
+  "amount": 10.58,
+  "charged_amount": 10.58,
+  "status": "successful",
+  "IP": "52.209.154.143",
+  "currency": "GBP",
+  "appfee": 0.41,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2449251,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-14T17:13:16.000Z",
+    "updatedAt": "2024-07-14T17:13:16.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-14T17:13:35.925Z - {
+  "id": 6008653,
+  "txRef": "XTVQXCS2TP",
+  "flwRef": "FLW-MOCK-6f7fd309ed6267ddf96b03f7b921baf1",
+  "orderRef": "URF_1720977196213_4533535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-14T17:13:16.000Z",
+  "amount": 10.58,
+  "charged_amount": 10.58,
+  "status": "successful",
+  "IP": "52.209.154.143",
+  "currency": "GBP",
+  "appfee": 0.41,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2449251,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-14T17:13:16.000Z",
+    "updatedAt": "2024-07-14T17:13:16.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-14T17:13:43.035Z - Transaction not found or transaction already completed !!!
+2024-07-14T18:09:51.458Z - {
+  "id": 6011010,
+  "txRef": "4IZYHGOKNM",
+  "flwRef": "FLW-M03K-3421a9afda2cb70d181f447c47771efa",
+  "orderRef": "URF_9C7D99FED8E7666BE6_0582123",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-14T18:09:42.000Z",
+  "amount": 10.58,
+  "charged_amount": 10.58,
+  "status": "successful",
+  "IP": "52.209.154.143",
+  "currency": "GBP",
+  "appfee": 0.41,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2449273,
+    "phone": "07030163523",
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-14T18:09:42.000Z",
+    "updatedAt": "2024-07-14T18:09:42.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-14T18:09:51.458Z - {
+  "id": 6011010,
+  "txRef": "4IZYHGOKNM",
+  "flwRef": "FLW-M03K-3421a9afda2cb70d181f447c47771efa",
+  "orderRef": "URF_9C7D99FED8E7666BE6_0582123",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-14T18:09:42.000Z",
+  "amount": 10.58,
+  "charged_amount": 10.58,
+  "status": "successful",
+  "IP": "52.209.154.143",
+  "currency": "GBP",
+  "appfee": 0.41,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2449273,
+    "phone": "07030163523",
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-14T18:09:42.000Z",
+    "updatedAt": "2024-07-14T18:09:42.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-14T18:09:58.570Z - Transaction not found or transaction already completed !!!
+2024-07-17T23:47:51.862Z - {
+  "id": 6207500,
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 105.8,
+  "charged_amount": 105.8,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 4.02,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-17T23:47:51.862Z - {
+  "id": 6207500,
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 105.8,
+  "charged_amount": 105.8,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 4.02,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-17T23:47:58.973Z - Transaction not found or transaction already completed !!!
+2024-07-19T19:54:05.185Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-19T19:54:05.186Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T02:45:07.779Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T02:45:07.780Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T02:46:14.221Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T02:46:14.221Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T02:59:31.950Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T02:59:31.950Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T03:31:34.564Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T03:31:34.565Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T03:32:01.603Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T03:32:01.603Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T03:39:48.801Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T03:39:48.801Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T03:40:48.514Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T03:40:48.514Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T03:41:35.934Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T03:41:35.934Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T03:53:54.263Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T03:53:54.264Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T04:53:08.664Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T04:53:08.665Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T05:03:51.377Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T05:03:51.378Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T05:07:05.306Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T05:07:05.307Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T05:08:41.800Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T05:08:41.802Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T05:09:16.948Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T05:09:16.948Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T05:35:20.158Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T05:35:20.158Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T05:35:20.282Z - Transaction not found or transaction already completed !!!
+2024-07-20T05:36:48.011Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T05:36:48.012Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T05:36:48.128Z - Transaction not found or transaction already completed !!!
+2024-07-20T05:37:59.083Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T05:37:59.083Z - {
+  "id": "6207500",
+  "txRef": "FX6TX0D0GA",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T12:31:57.024Z - {
+  "id": 6362990,
+  "txRef": "2AGJNRSRVN",
+  "flwRef": "FLW-MOCK-479dce7c3579655985c01dac2cec913b",
+  "orderRef": "URF_1721478695870_4927135",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-20T12:31:36.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "52.209.154.143",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454116,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-20T12:31:36.000Z",
+    "updatedAt": "2024-07-20T12:31:36.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T12:31:57.026Z - {
+  "id": 6362990,
+  "txRef": "2AGJNRSRVN",
+  "flwRef": "FLW-MOCK-479dce7c3579655985c01dac2cec913b",
+  "orderRef": "URF_1721478695870_4927135",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-20T12:31:36.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "52.209.154.143",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454116,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-20T12:31:36.000Z",
+    "updatedAt": "2024-07-20T12:31:36.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T13:53:54.132Z - {
+  "id": 6366546,
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-M03K-7a991a10566a6ccdaea16344d096bb11",
+  "orderRef": "URF_9C7D6C66FC6A8FA897_3628835",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-20T13:53:48.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2449273,
+    "phone": "07030163523",
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-14T18:09:42.000Z",
+    "updatedAt": "2024-07-14T18:09:42.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T13:53:54.134Z - {
+  "id": 6366546,
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-M03K-7a991a10566a6ccdaea16344d096bb11",
+  "orderRef": "URF_9C7D6C66FC6A8FA897_3628835",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-20T13:53:48.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2449273,
+    "phone": "07030163523",
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-14T18:09:42.000Z",
+    "updatedAt": "2024-07-14T18:09:42.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T14:10:35.136Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T14:10:35.138Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T14:13:12.309Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T14:13:12.309Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T14:18:57.845Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T14:18:57.845Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T22:27:54.062Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T22:27:54.062Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T22:32:56.832Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T22:32:56.833Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T22:44:36.435Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T22:44:36.440Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T22:53:47.362Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T22:53:47.363Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T22:55:20.109Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T22:55:20.109Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T23:01:56.219Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T23:01:56.220Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T23:04:06.004Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T23:04:06.005Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T23:12:25.487Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T23:12:25.488Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T23:22:16.626Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T23:22:16.627Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T23:22:21.760Z - Transaction not found or transaction already completed !!!
+2024-07-20T23:23:11.714Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T23:23:11.715Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T23:26:04.923Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T23:26:04.924Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T23:27:34.965Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-20T23:27:34.967Z - {
+  "id": "6207500",
+  "txRef": "Y1UBJLB7CI",
+  "flwRef": "FLW-MOCK-b01f57279798845a23b22199fdec8885",
+  "orderRef": "URF_1721260061737_5053535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-17T23:47:42.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2452134,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-17T23:47:41.000Z",
+    "updatedAt": "2024-07-17T23:47:41.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-21T08:11:16.396Z - {
+  "id": 6412774,
+  "txRef": "3ZO0VNX7DF",
+  "flwRef": "FLW-MOCK-1593fc4ea00949137d103c5441553e89",
+  "orderRef": "URF_1721549457774_7905035",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-21T08:10:58.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454449,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-21T08:10:58.000Z",
+    "updatedAt": "2024-07-21T08:10:58.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-21T08:11:16.396Z - {
+  "id": 6412774,
+  "txRef": "3ZO0VNX7DF",
+  "flwRef": "FLW-MOCK-1593fc4ea00949137d103c5441553e89",
+  "orderRef": "URF_1721549457774_7905035",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-21T08:10:58.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454449,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-21T08:10:58.000Z",
+    "updatedAt": "2024-07-21T08:10:58.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-21T08:38:56.331Z - {
+  "id": 6413946,
+  "txRef": "A3DMT2ANHD",
+  "flwRef": "FLW-M03K-32052f88fa3f22b7c1c0325fad973267",
+  "orderRef": "URF_EEF89EC9E79D8A66DF_1133871",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-21T08:38:53.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "NGN",
+  "appfee": 1.4,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454458,
+    "phone": "1234567890",
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-21T08:38:53.000Z",
+    "updatedAt": "2024-07-21T08:38:53.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-21T08:38:56.331Z - {
+  "id": 6413946,
+  "txRef": "A3DMT2ANHD",
+  "flwRef": "FLW-M03K-32052f88fa3f22b7c1c0325fad973267",
+  "orderRef": "URF_EEF89EC9E79D8A66DF_1133871",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-21T08:38:53.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "NGN",
+  "appfee": 1.4,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454458,
+    "phone": "1234567890",
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-21T08:38:53.000Z",
+    "updatedAt": "2024-07-21T08:38:53.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-21T09:44:12.946Z - {
+  "id": 6416722,
+  "txRef": "IAUWFLMZM3",
+  "flwRef": "FLW-M03K-70e985767e7ef56233582964c245c373",
+  "orderRef": "URF_EEF8FCBAB6C8779DC9_5048725",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-21T09:44:08.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "USD",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454458,
+    "phone": "1234567890",
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-21T08:38:53.000Z",
+    "updatedAt": "2024-07-21T08:38:53.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-21T09:44:12.947Z - {
+  "id": 6416722,
+  "txRef": "IAUWFLMZM3",
+  "flwRef": "FLW-M03K-70e985767e7ef56233582964c245c373",
+  "orderRef": "URF_EEF8FCBAB6C8779DC9_5048725",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-21T09:44:08.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "USD",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454458,
+    "phone": "1234567890",
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-21T08:38:53.000Z",
+    "updatedAt": "2024-07-21T08:38:53.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-21T21:01:42.418Z - {
+  "id": 6445413,
+  "txRef": "ZGFOYYSGCA",
+  "flwRef": "FLW-MOCK-d092b38bdf18d45193fa841b8eb84ca3",
+  "orderRef": "URF_1721595686813_5259535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-21T21:01:27.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454689,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-21T21:01:27.000Z",
+    "updatedAt": "2024-07-21T21:01:27.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-21T21:01:42.419Z - {
+  "id": 6445413,
+  "txRef": "ZGFOYYSGCA",
+  "flwRef": "FLW-MOCK-d092b38bdf18d45193fa841b8eb84ca3",
+  "orderRef": "URF_1721595686813_5259535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-21T21:01:27.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454689,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-21T21:01:27.000Z",
+    "updatedAt": "2024-07-21T21:01:27.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-21T21:04:51.144Z - {
+  "id": 6445565,
+  "txRef": "D5R6UM84A7",
+  "flwRef": "FLW-M03K-ad571fc13182c9443d2a349cdc47fb94",
+  "orderRef": "URF_EEF89D6CBA9A6BB779_5886874",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-21T21:04:46.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454458,
+    "phone": "1234567890",
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-21T08:38:53.000Z",
+    "updatedAt": "2024-07-21T08:38:53.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-21T21:04:51.144Z - {
+  "id": 6445565,
+  "txRef": "D5R6UM84A7",
+  "flwRef": "FLW-M03K-ad571fc13182c9443d2a349cdc47fb94",
+  "orderRef": "URF_EEF89D6CBA9A6BB779_5886874",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-21T21:04:46.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454458,
+    "phone": "1234567890",
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-21T08:38:53.000Z",
+    "updatedAt": "2024-07-21T08:38:53.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-21T23:42:50.796Z - {
+  "id": 6452185,
+  "txRef": "HMAVDBPP8H",
+  "flwRef": "FLW-MOCK-aca7d54867bbd1fb8e0aae556f2d2843",
+  "orderRef": "URF_1721605362579_8885135",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-21T23:42:43.000Z",
+  "amount": 50,
+  "charged_amount": 50,
+  "status": "successful",
+  "IP": "52.209.154.143",
+  "currency": "NGN",
+  "appfee": 0.7,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454743,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-21T23:42:42.000Z",
+    "updatedAt": "2024-07-21T23:42:42.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-21T23:42:50.796Z - {
+  "id": 6452185,
+  "txRef": "HMAVDBPP8H",
+  "flwRef": "FLW-MOCK-aca7d54867bbd1fb8e0aae556f2d2843",
+  "orderRef": "URF_1721605362579_8885135",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-21T23:42:43.000Z",
+  "amount": 50,
+  "charged_amount": 50,
+  "status": "successful",
+  "IP": "52.209.154.143",
+  "currency": "NGN",
+  "appfee": 0.7,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454743,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-21T23:42:42.000Z",
+    "updatedAt": "2024-07-21T23:42:42.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-21T23:58:29.225Z - {
+  "id": 6452849,
+  "txRef": "TT5WCZA4MI",
+  "flwRef": "FLW-M03K-d74b596c45ca3852a6c5845810307482",
+  "orderRef": "URF_EEF8A6D6899FB97CF9_6306854",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-21T23:58:26.000Z",
+  "amount": 20,
+  "charged_amount": 20,
+  "status": "successful",
+  "IP": "52.209.154.143",
+  "currency": "USD",
+  "appfee": 0.76,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454458,
+    "phone": "1234567890",
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-21T08:38:53.000Z",
+    "updatedAt": "2024-07-21T08:38:53.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-21T23:58:29.226Z - {
+  "id": 6452849,
+  "txRef": "TT5WCZA4MI",
+  "flwRef": "FLW-M03K-d74b596c45ca3852a6c5845810307482",
+  "orderRef": "URF_EEF8A6D6899FB97CF9_6306854",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-21T23:58:26.000Z",
+  "amount": 20,
+  "charged_amount": 20,
+  "status": "successful",
+  "IP": "52.209.154.143",
+  "currency": "USD",
+  "appfee": 0.76,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2454458,
+    "phone": "1234567890",
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-21T08:38:53.000Z",
+    "updatedAt": "2024-07-21T08:38:53.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-22T10:44:38.766Z - {
+  "id": 6480532,
+  "txRef": "6TNBEYX4AE",
+  "flwRef": "FLW-MOCK-04269952da41e0e217e5e6cb4efb2fca",
+  "orderRef": "URF_1721645070438_4487535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-22T10:44:30.000Z",
+  "amount": 30,
+  "charged_amount": 30,
+  "status": "successful",
+  "IP": "52.209.154.143",
+  "currency": "USD",
+  "appfee": 1.14,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2455243,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-22T10:44:30.000Z",
+    "updatedAt": "2024-07-22T10:44:30.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-22T10:44:38.767Z - {
+  "id": 6480532,
+  "txRef": "6TNBEYX4AE",
+  "flwRef": "FLW-MOCK-04269952da41e0e217e5e6cb4efb2fca",
+  "orderRef": "URF_1721645070438_4487535",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-22T10:44:30.000Z",
+  "amount": 30,
+  "charged_amount": 30,
+  "status": "successful",
+  "IP": "52.209.154.143",
+  "currency": "USD",
+  "appfee": 1.14,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2455243,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-22T10:44:30.000Z",
+    "updatedAt": "2024-07-22T10:44:30.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-22T23:40:24.211Z - {
+  "id": 6495007,
+  "txRef": "9BVFO35T5K",
+  "flwRef": "flwm3s4m0c1721691617103",
+  "orderRef": "URF_MMGH_1721691616603_6424835",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-22T23:40:16.000Z",
+  "amount": 200,
+  "charged_amount": 200,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GHS",
+  "appfee": 9,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2455866,
+    "phone": "233703016523",
+    "fullName": "Anonymous Customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-22T23:40:16.000Z",
+    "updatedAt": "2024-07-22T23:40:16.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "id": "NO-ENTITY"
+  },
+  "event.type": "MOBILEMONEYGH_TRANSACTION"
+}
+2024-07-22T23:40:24.211Z - {
+  "id": 6495007,
+  "txRef": "9BVFO35T5K",
+  "flwRef": "flwm3s4m0c1721691617103",
+  "orderRef": "URF_MMGH_1721691616603_6424835",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-22T23:40:16.000Z",
+  "amount": 200,
+  "charged_amount": 200,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GHS",
+  "appfee": 9,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2455866,
+    "phone": "233703016523",
+    "fullName": "Anonymous Customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-22T23:40:16.000Z",
+    "updatedAt": "2024-07-22T23:40:16.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "id": "NO-ENTITY"
+  },
+  "event.type": "MOBILEMONEYGH_TRANSACTION"
+}
+2024-07-26T22:50:50.447Z - {
+  "id": 6504042,
+  "txRef": "A585C0CYI0",
+  "flwRef": "FLW-MOCK-20880ae5501051984de5ecec49e5f406",
+  "orderRef": "URF_1722034231772_7833735",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-26T22:50:32.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2459467,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-26T22:50:31.000Z",
+    "updatedAt": "2024-07-26T22:50:31.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-26T22:50:50.449Z - {
+  "id": 6504042,
+  "txRef": "A585C0CYI0",
+  "flwRef": "FLW-MOCK-20880ae5501051984de5ecec49e5f406",
+  "orderRef": "URF_1722034231772_7833735",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-26T22:50:32.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "GBP",
+  "appfee": 3.8,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2459467,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-26T22:50:31.000Z",
+    "updatedAt": "2024-07-26T22:50:31.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-27T00:50:28.771Z - {
+  "id": 6504100,
+  "txRef": "QTVB2ESMJU",
+  "flwRef": "FLW-MOCK-2502ac125ad3bbf431be7f62a1a10132",
+  "orderRef": "URF_1722041420332_5809935",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-27T00:50:20.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "NGN",
+  "appfee": 1.4,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2459494,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-27T00:50:20.000Z",
+    "updatedAt": "2024-07-27T00:50:20.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-27T00:50:28.774Z - {
+  "id": 6504100,
+  "txRef": "QTVB2ESMJU",
+  "flwRef": "FLW-MOCK-2502ac125ad3bbf431be7f62a1a10132",
+  "orderRef": "URF_1722041420332_5809935",
+  "paymentPlan": null,
+  "paymentPage": null,
+  "createdAt": "2024-07-27T00:50:20.000Z",
+  "amount": 100,
+  "charged_amount": 100,
+  "status": "successful",
+  "IP": "54.75.161.64",
+  "currency": "NGN",
+  "appfee": 1.4,
+  "merchantfee": 0,
+  "merchantbearsfee": 1,
+  "customer": {
+    "id": 2459494,
+    "phone": null,
+    "fullName": "Anonymous customer",
+    "customertoken": null,
+    "email": "mosesegboh@yahoo.com",
+    "createdAt": "2024-07-27T00:50:20.000Z",
+    "updatedAt": "2024-07-27T00:50:20.000Z",
+    "deletedAt": null,
+    "AccountId": 2189559
+  },
+  "entity": {
+    "card6": "553188",
+    "card_last4": "2950",
+    "card_country_iso": "NG",
+    "createdAt": "2020-04-24T15:19:22.000Z"
+  },
+  "event.type": "CARD_TRANSACTION"
+}
+2024-07-27T01:23:14.597Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240727012309122779624",
+    "flw_ref": "BPUSSD1722043391667068",
+    "batch_reference": null,
+    "customer_reference": "0P8DESOXQ9",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-27T01:23:14.598Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240727012309122779624",
+    "flw_ref": "BPUSSD1722043391667068",
+    "batch_reference": null,
+    "customer_reference": "0P8DESOXQ9",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-27T01:23:16.733Z - Transaction not found or transaction already completed !!!
+2024-07-27T11:22:51.257Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 90,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240727112246011563251",
+    "flw_ref": "BPUSSD1722079368349558",
+    "batch_reference": null,
+    "customer_reference": "L0XFUPKWOJ",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-27T11:22:53.379Z - Transaction not found or transaction already completed !!!
+2024-07-27T11:29:56.072Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 90,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240727112950767410229",
+    "flw_ref": "BPUSSD1722079793168497",
+    "batch_reference": null,
+    "customer_reference": "SOW5MOCRRF",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-27T11:29:58.182Z - Transaction not found or transaction already completed !!!
+2024-07-27T12:43:42.409Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 90,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240727112950767410229",
+    "flw_ref": "BPUSSD1722079793168497",
+    "batch_reference": null,
+    "customer_reference": "SOW5MOCRRF",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-27T12:58:28.471Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 90,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240727112950767410229",
+    "flw_ref": "BPUSSD1722079793168497",
+    "batch_reference": null,
+    "customer_reference": "SOW5MOCRRF",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-27T13:22:28.894Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 90,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240727112950767410229",
+    "flw_ref": "BPUSSD1722079793168497",
+    "batch_reference": null,
+    "customer_reference": "SOW5MOCRRF",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-27T13:33:53.237Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 90,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240727112950767410229",
+    "flw_ref": "BPUSSD1722079793168497",
+    "batch_reference": null,
+    "customer_reference": "SOW5MOCRRF",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-07-27T13:44:47.068Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 90,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240727112950767410229",
+    "flw_ref": "BPUSSD1722079793168497",
+    "batch_reference": null,
+    "customer_reference": "SOW5MOCRRF",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-08-03T17:18:50.910Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN 50 MB",
+    "tx_ref": "CF-FLYAPI-20240803051846124304733",
+    "flw_ref": "BP17227055283251461",
+    "batch_reference": null,
+    "customer_reference": "TNKBVONMQU",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-08-03T17:18:53.027Z - Transaction not found or transaction already completed !!!
+2024-08-03T17:22:42.761Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN 50 MB",
+    "tx_ref": "CF-FLYAPI-20240803052238036419049",
+    "flw_ref": "BP17227057601290924",
+    "batch_reference": null,
+    "customer_reference": "XIKRVZE3VE",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-08-03T17:22:44.939Z - Transaction not found or transaction already completed !!!
+2024-08-03T21:15:23.453Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240803091517151610988",
+    "flw_ref": "BPUSSD1722719719362918",
+    "batch_reference": null,
+    "customer_reference": "2M5YXB6LPN",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-08-03T21:15:25.567Z - Transaction not found or transaction already completed !!!
+2024-08-04T09:17:25.285Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240803091517151610988",
+    "flw_ref": "BPUSSD1722719719362918",
+    "batch_reference": null,
+    "customer_reference": "2M5YXB6LPN",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}

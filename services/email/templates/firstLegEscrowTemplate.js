@@ -1,4 +1,4 @@
-const success = ({transactionId,  amount,  transactionType, redemptionDate, details, status}) => {
+const success = ({transactionId,  amount,  transactionType, redemptionDate, details, transactionCurrency, status}) => {
     const subject = `An Escrow Transaction Has Been Initiated In Your Favour`
     const body = `<html>
                     <head>
@@ -11,6 +11,7 @@ const success = ({transactionId,  amount,  transactionType, redemptionDate, deta
                         <p>Here are the details of the transaction:</p>
                         <p><b>Transaction ID: ${transactionId}</b></p>
                         <p><b>Amount: ${amount}</b></p>
+                        <p><b>Transaction Currency: ${transactionCurrency}</b></p>
                         <p><b>Transaction Redemption Date: ${redemptionDate}</b></p>
                         <p><b>Transaction Leg: ${transactionType}</b></p>
                         <p><b>Transaction Status: ${status}</b></p>
@@ -32,7 +33,7 @@ const success = ({transactionId,  amount,  transactionType, redemptionDate, deta
 }
 
 
-const failed = ({transactionId,  amount,  transactionType, redemptionDate, details, status}) => {
+const failed = ({transactionId,  amount,  transactionType, redemptionDate, details, transactionCurrency, status}) => {
     const subject = `An Initiated escrow Transaction Has Failed` 
 
     const body = `<html>
@@ -46,6 +47,7 @@ const failed = ({transactionId,  amount,  transactionType, redemptionDate, detai
                 <p>Here are the details of the transaction:</p>
                 <p><b>Transaction ID: ${transactionId}</b></p>
                 <p><b>Amount: ${amount}</b></p>
+                <p><b>Transaction Currency: ${transactionCurrency}</b></p>
                 <p><b>Transaction Redemption Date: ${redemptionDate}</b></p>
                 <p><b> Transaction Leg: ${transactionType}</b></p>
                 <p><b>Transaction Status: ${status}</b></p>

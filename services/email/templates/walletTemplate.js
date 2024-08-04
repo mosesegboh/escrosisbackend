@@ -1,36 +1,65 @@
-const success = ({transactionId,  amount,  transactionType, date, details}) => {
+const success = ({transactionId,  amount,  transactionType, transactionCurrency, date, details}) => {
         
-    const subject = `You Have Successfully Added Funds to your wallet`
+    const subject = `You Have Successfully Added Funds to your Wallet`
 
-    const body = `<p>Hello There!</p>
-    <p>You have successfully added funds to your account.</p>
-    <p>The details of the transaction is below:</p>
-    <p><b>Transaction ID: ${transactionId}</b></p>
-    <p><b>Amount: ${amount}</b></p>
-    <p><b>Transaction Type: ${transactionType}</b></p>
-    <p><b>Transaction Date: ${date}</b></p>
-    <p><b> Details: ${details}</b></p>
-    <p>Thank You for transacting with us</p>
-    <p>Warm Regards</p>`
+    const body = `<html>
+                    <head>
+                        <img src="${process.env.EMAIL_HEADER_BANNER}">
+                    </head>
+                    <hr>
+                    <body>
+                        <p>Hello There!</p>
+                        <p>You have successfully added funds to your account.</p>
+                        <p>The details of the transaction is below:</p>
+                        <p><b>Transaction ID: ${transactionId}</b></p>
+                        <p><b>Amount: ${amount}</b></p>
+                        <p><b>Transaction Currency: ${transactionCurrency}</b></p>
+                        <p><b>Transaction Type: ${transactionType}</b></p>
+                        <p><b>Transaction Date: ${date}</b></p>
+                        <p><b> Details: ${details}</b></p>
+                        <p>Thank You for transacting with us</p>
+                        <p>Warm Regards</p>
+                        </body>
+                        <hr>
+                        <footer>
+                            <p><a href="https://www.escrosispayments.com">www.escrosispayments.com</a></p>
+                            <img src="${process.env.EMAIL_FOOTER_BANNER}">
+                        </footer>
+                    </html>`
 
     const emailDetails = { subject: subject, body: body }
 
     return emailDetails
 }
 
- const failed = ({transactionId,  amount,  transactionType, date, details}) => {
+ const failed = ({transactionId,  amount,  transactionType, transactionCurrency, date, details}) => {
     const subject = `Your Addition To Wallet Transaction Failed`
 
-    const body = `<p>Hello There!</p>
-    <p>Sadly, your addition to wallet transaction failed.</p>
-    <p>The details of the transaction is below:</p>
-    <p><b>Transaction ID: ${transactionId}</b></p>
-    <p><b>Amount: ${amount}</b></p>
-    <p><b>Transaction Type: ${transactionType}</b></p>
-    <p><b>Transaction Date: ${date}</b></p>
-    <p><b> Details: ${details}</b></p>
-    <p>Kindly try again later</p>
-    <p>Warm Regards</p>`
+    const body = `
+                <html>
+                    <head>
+                        <img src="${process.env.EMAIL_HEADER_BANNER}">
+                    </head>
+                    <hr>
+                    <body>
+                        <p>Hello There!</p>
+                        <p>Sadly, your addition to wallet transaction failed.</p>
+                        <p>The details of the transaction is below:</p>
+                        <p><b>Transaction ID: ${transactionId}</b></p>
+                        <p><b>Amount: ${amount}</b></p>
+                        <p><b>Transaction Currency: ${transactionCurrency}</b></p>
+                        <p><b>Transaction Type: ${transactionType}</b></p>
+                        <p><b>Transaction Date: ${date}</b></p>
+                        <p><b> Details: ${details}</b></p>
+                        <p>Kindly try again later</p>
+                        <p>Warm Regards</p>
+                        </body>
+                        <hr>
+                    <footer>
+                        <p><a href="https://www.escrosispayments.com">www.escrosispayments.com</a></p>
+                        <img src="${process.env.EMAIL_FOOTER_BANNER}">
+                    </footer>
+                </html>`
 
     const emailDetails = { subject: subject, body: body }
 

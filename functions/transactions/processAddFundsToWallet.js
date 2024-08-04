@@ -11,8 +11,7 @@ const processAddFundsToWallet = async (data, res) => {
         balanceForAdditionalCurrencies, 
         currentBalance, 
         currentlockedTransactionBalance,
-        currentUnlockedTransactionBalance,
-        // userCurrentTransactionCurrency,
+        currentUnlockedTransactionBalance, 
     } = userCurrentDetails
 
     var update = {
@@ -28,15 +27,19 @@ const processAddFundsToWallet = async (data, res) => {
         amount: data.amount,
         email: data.email,
         date: data.date,
-        details: data.details,
-        transactionType: data.transactionType,
-        customer: data.customer,
-        reference: data.reference,
-        balanceForAdditionalCurrencies: balanceForAdditionalCurrencies,
-        // data: data.data
-    };
+        details: data.details, 
 
-    saveTransaction(undefined, update, data, res, "directsave")
+        shouldCharge: data.shouldCharge,
+        transactionFeesAmountDetails: data.transactionFeesAmountDetails,
+        originalAmount: data.originalAmount,
+        totalTransactionAmount: data.totalTransactionAmount,
+        // customer: data.customer,
+        // reference: data.reference,
+        balanceForAdditionalCurrencies: balanceForAdditionalCurrencies,   
+    };
+        // console.log(update, '--this is data')
+        // return
+    saveTransaction(undefined, update, data, res, "directsave") 
 }
 
 module.exports = {processAddFundsToWallet}

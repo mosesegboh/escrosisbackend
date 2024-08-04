@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ServiceFeeSchema = new Schema({
-    transacitonType: String,
+    transactionType: String,
     email: String,
     amount: Number,
     reference: String,

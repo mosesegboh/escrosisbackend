@@ -1,4 +1,4 @@
-const success = ({transactionId,  amount,  transactionType, details, status}) => {
+const success = ({transactionId,  amount,  transactionType, details, transactionCurrency, status}) => {
     const subject = status == 'success' ? `Your Transfer Is Successful` : `Your Transfer Has Been Initiated`
 
     const body = `<html>
@@ -12,6 +12,7 @@ const success = ({transactionId,  amount,  transactionType, details, status}) =>
             <p>Here are the details of the transaction:</p>
             <p><b>Transaction ID: ${transactionId}</b></p>
             <p><b>Amount: ${amount}</b></p>
+            <p><b>Transaction Currency: ${transactionCurrency}</b></p>
             <p><b>Transaction Leg: ${transactionType}</b></p>
             <p><b>Transaction Status: ${status}</b></p>
             <p><b> Details: ${details}</b></p>
@@ -27,11 +28,11 @@ const success = ({transactionId,  amount,  transactionType, details, status}) =>
             <img src="${process.env.EMAIL_FOOTER_BANNER}">
         </footer>
     </html>`
-    const params = {subject: subject,body: body}
+    const params = {subject: subject, body: body}
     return params
 }
 
-const failed = ({transactionId,  amount,  transactionType, details, status}) => {
+const failed = ({transactionId,  amount,  transactionType, details, transactionCurrency, status}) => {
     const subject = `Your Transfer Has Failed` 
 
     const body = `<html>
@@ -45,6 +46,7 @@ const failed = ({transactionId,  amount,  transactionType, details, status}) => 
                 <p>Here are the details of the transaction:</p>
                 <p><b>Transaction ID: ${transactionId}</b></p>
                 <p><b>Amount: ${amount}</b></p>
+                <p><b>Transaction Currency: ${transactionCurrency}</b></p>
                 <p><b> Transaction Leg: ${transactionType}</b></p>
                 <p><b>Transaction Status: ${status}</b></p>
                 <p><b> Details: ${details}</b></p>

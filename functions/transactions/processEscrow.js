@@ -1,5 +1,5 @@
 const {validateData} = require('../validation/validateData')
-const {saveTransaction, getCurrentUserDetails} = require('../process')
+const {saveTransaction, getCurrentUserDetails, updateParticularCurrencyBalances} = require('../process')
 
 const processEscrow = async (data, res) => {
 
@@ -19,6 +19,7 @@ const processEscrow = async (data, res) => {
     var update = {
         transactionId: data.transactionId, 
         transactionName: data.transactionName,
+        transactionCurrency: data.transactionCurrency,
         transactionType: data.transactionType,
         balance: currentBalance - +data.amount,
         ...((data.transactionType == "FirstLeg") ? {  
@@ -49,7 +50,7 @@ const processEscrow = async (data, res) => {
         transactFromWallet: data.transactFromWallet,
         transactionType: data.transactionType, 
         reference: data.transactionId,
-        balanceForAdditionalCurrencies: balanceForAdditionalCurrencies   
+        balanceForAdditionalCurrencies: await updateParticularCurrencyBalances(data.amount, data.currency, balanceForAdditionalCurrencies, 'add')   
     }; 
     // var multi = {firstKey:  data.secondLegTransactionId}   
     // console.log(data.transactionType == "SecondLeg" ? {firstKey:  data.secondLegTransactionId} : undefined, '--update')

@@ -1,7 +1,7 @@
 const validation = require('../validation/validateData')
 const {saveTransaction, getCurrentUserDetails, collectFees} = require('../process')
 
-const processTransfers = async (data, res) => {
+const processTransfers = async (data, res) => {  
 
     validation.validateData(data, res)
 
@@ -24,7 +24,10 @@ const processTransfers = async (data, res) => {
 
     const userCurrentDetails = await getCurrentUserDetails(data, undefined, 1, undefined);
 
-    var {  currentBalance } = userCurrentDetails
+    var {
+        balanceForAdditionalCurrencies, 
+        currentBalance, 
+    } = userCurrentDetails
 
     var filter = { transactionId: transactionId }; 
     var update = {
@@ -45,6 +48,7 @@ const processTransfers = async (data, res) => {
         callbackUrl: callback_url,
         debitCurrency: debit_currency,
         status: 'pending',
+        balanceForAdditionalCurrencies: balanceForAdditionalCurrencies,
 
         ...((transferType === "isGUZT") ? { destination_branch_code: data.branchCode, beneficiary_name: data.beneficiaryName } : {}),
 

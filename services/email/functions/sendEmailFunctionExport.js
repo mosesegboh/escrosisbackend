@@ -22,9 +22,11 @@ const sendEmailFunction  = async (
         transactionId, 
         redemptionDate, 
         amount, 
+        transactionCurrency,
         transactionType, 
         details, 
         secondPartyEmail, 
+        date,
         secondLegTransactionId, 
     }, res, status, {success, failed}) => {
     try {
@@ -33,8 +35,8 @@ const sendEmailFunction  = async (
             var mailOPtions = { 
                 from : process.env.AUTH_EMAIL,
                 to: recipient,
-                subject: success({email, transactionId, redemptionDate, amount, transactionType, details, status, secondLegTransactionId}).subject,
-                html: success({email, transactionId, redemptionDate, amount, transactionType, details, status, secondLegTransactionId}).body,
+                subject: success({email, transactionId, redemptionDate, amount, transactionType, date, details, transactionCurrency, status, secondLegTransactionId}).subject,
+                html: success({email, transactionId, redemptionDate, amount, transactionType, date, details, transactionCurrency , status, secondLegTransactionId}).body,
             }
         }
 
@@ -43,8 +45,8 @@ const sendEmailFunction  = async (
             var mailOPtions = { 
                 from : process.env.AUTH_EMAIL,
                 to: recipient,
-                subject: failed({email, transactionId, redemptionDate, amount, transactionType, details, status, secondLegTransactionId}).subject,
-                html: failed({email, transactionId, redemptionDate, amount, transactionType, details, status, secondLegTransactionId}).body,
+                subject: failed({email, transactionId, redemptionDate, amount, transactionType, date, details,transactionCurrency, status, secondLegTransactionId}).subject,
+                html: failed({email, transactionId, redemptionDate, amount, transactionType, details, date, status, transactionCurrency, secondLegTransactionId}).body,
             }
         }
         await transporter.sendMail(mailOPtions)

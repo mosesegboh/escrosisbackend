@@ -1,5 +1,5 @@
 const {validateData} = require('../validation/validateData')
-const {saveTransaction, getCurrentUserDetails} = require('../process')
+const {saveTransaction, getCurrentUserDetails, updateParticularCurrencyBalances} = require('../process')
 
 const processBillPayment = async (data, res) => {
 
@@ -16,7 +16,7 @@ const processBillPayment = async (data, res) => {
     } = userCurrentDetails
 
     var update = {
-        status: data.status,
+        status: "pending",
         transactionId: data.transactionId,
         transactionName: data.transactionName,
         transactionType: data.transactionType,
@@ -30,11 +30,23 @@ const processBillPayment = async (data, res) => {
         transactFromWallet: data.transactFromWallet,
         country: data.country,
         transactionType: data.transactionType,
-        customer: data.customer,
+        customer_id: data.customer_id,
         recurrence: data.recurrence,
-        reference: data.reference,
+        // reference: data.reference,
+        currency: data.currency,
+        amountDeductedFromSelectedCurrencyBalance: data.amountDeductedFromSelectedCurrencyBalance,
+        transactionCurrency: data.transactionCurrency,
+
+        shouldCharge: data.shouldCharge,
+        transactionFeesAmountDetails: data.transactionFeesAmountDetails,
+        originalAmount: data.originalAmount,
+        totalTransactionAmount: data.totalTransactionAmount,
         balanceForAdditionalCurrencies: balanceForAdditionalCurrencies 
+        // balanceForAdditionalCurrencies: await updateParticularCurrencyBalances(data.amount, data.currency, balanceForAdditionalCurrencies, 'subtract')
     };
+
+    // console.log(update, '--UPDATE') 
+    // return
 
     saveTransaction(undefined, update, data, res, "directsave")
 }

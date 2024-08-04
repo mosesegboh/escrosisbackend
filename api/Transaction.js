@@ -13,13 +13,15 @@ const {processEscrow} = require('../functions/transactions/processEscrow')
 const {processPayments} = require('../functions/transactions/processPayments')
 const {processRedeemTransactionImmediate} = require('../functions/transactions/processRedeemTransactionImmediate')
 const {processCancelTransactionImmediate} = require('../functions/transactions/processCancelTransaction')
+const {getCurrentUserDetails} = require('../functions/process')
+const {validateData} = require('../functions/validation/validateData')
 
 router.post('/add-transaction',  authMiddleware, authenticateTokenMiddleware, async  (req, res) => {
-    
-    let { transactionName } = req.body 
+
+    let { transactionName } = req.body
     // console.log(transactionName, '--transaction name')
     // return
-    if (transactionName == 'transfer') {  
+    if (transactionName == 'transfer') {
         processTransfers( req.body, res)
         return
     }
@@ -66,13 +68,13 @@ router.post('/add-transaction',  authMiddleware, authenticateTokenMiddleware, as
 })
 
 router.post('/get-transactions', authMiddleware, authenticateTokenMiddleware, (req, res) => {
-    // console.log('i was hit ooooooooooooo!!!!!!!!!')   
+    // console.log('i was hit ooooooooooooo!!!!!!!!!')
     if (req.query.searchSecondLeg) {
         // console.log('i was here')
-        processSearchSecondLeg(req.query.searchSecondLeg, res) 
+        processSearchSecondLeg(req.query.searchSecondLeg, res)
         return
     }
-    
+
     let {email} = req.body
     email = email.trim()
     let { page, limit } = req.query;
@@ -86,7 +88,7 @@ router.post('/get-transactions', authMiddleware, authenticateTokenMiddleware, (r
             message: "Empty credentials"
         })
     } else {
-        Transaction.countDocuments({ email }).then(totalCount => {   
+        Transaction.countDocuments({ email }).then(totalCount => {
             Transaction.find({email})
             .skip((page - 1) * limit) // Skip the previous pages' data
             .limit(limit) // Limit the number of results
@@ -102,9 +104,9 @@ router.post('/get-transactions', authMiddleware, authenticateTokenMiddleware, (r
                         data: data,
                         totalCount: totalCount,
                         currentPage: page,
-                        totalPages: Math.ceil(totalCount / limit) 
+                        totalPages: Math.ceil(totalCount / limit)
                     })
-                }    
+                }
             }).catch(err => {
                 res.json({
                     status: "FAILED",
@@ -116,7 +118,7 @@ router.post('/get-transactions', authMiddleware, authenticateTokenMiddleware, (r
 })
 
 router.get('/get-transaction', authMiddleware, authenticateTokenMiddleware, (req, res) => {
-    
+
     let {email, transactionId} = req.body
 
     email = email.trim()
@@ -142,9 +144,9 @@ router.get('/get-transaction', authMiddleware, authenticateTokenMiddleware, (req
             }else{
                 res.json({
                     status: "SUCCESS",
-                    data: data  
+                    data: data
                 })
-            }    
+            }
         }).catch(err => {
             res.json({
                 status: "FAILED",
@@ -171,15 +173,94 @@ router.post('/test-api', (req, res) => {
                 "commission": 15,
                 "transaction_date": "2022-06-07T10:59:40.72Z",
                 "country": "NG",
-                "tx_ref": "CF-FLYAPI-20220607105940408290", 
+                "tx_ref": "CF-FLYAPI-20220607105940408290",
                 "extra": null,
                 "product_details": "FLY-API-NG-AIRTIME-MTN",
                 "status": "successful",
                 "code": "200"
             }
         })
-        
+
     }
+})
+
+router.get('/get-transaction-fees', (req, res) => {
+
+    if (req.query.module === 'wallet') {
+        return res.json({
+            "status": "success",
+            "message": "Transaction fees fetch successful",
+            "data":
+                {
+                    "bill": {
+                        name: 'wallet',
+                        charge: true,
+                        fees: {
+                            flutterwave: {
+                                charge_percent: process.env.FLUTTERWAVE_TRANSACTION_FEE_PERCENT,
+                                charge_flat: null,
+                                shouldCharge: true
+                            },
+                            transaction: {
+                                charge_percent: process.env.APP_TRANSACTION_FEE_PERCENT,
+                                charge_flat: null,
+                                shouldCharge: true
+                            },
+                            service: {
+                                charge_percent: process.env.APP_SERVICE_FEE_PERCENT,
+                                charge_flat: null,
+                                shouldCharge: false
+                            }
+                        }
+
+                    },
+                }
+
+        })
+    }
+
+    if (req.query.module = 'billpayment') {
+        return res.json({
+            "status": "success",
+            "message": "Transaction fees fetch successful",
+            "data":
+                {
+                    "bill": {
+                        name: 'billpayment',
+                        charge: true,
+                        fees: {
+                            flutterwave: {
+                                charge_percent: process.env.FLUTTERWAVE_TRANSACTION_FEE_PERCENT,
+                                charge_flat: null,
+                                shouldCharge: true
+                            },
+                            transaction: {
+                                charge_percent: process.env.APP_TRANSACTION_FEE_PERCENT,
+                                charge_flat: null,
+                                shouldCharge: true
+                            },
+                            service: {
+                                charge_percent: process.env.APP_SERVICE_FEE_PERCENT,
+                                charge_flat: null,
+                                shouldCharge: false
+                            }
+                        }
+
+                    },
+                }
+        })
+    }
+})
+
+router.post('/get-updated-user-balances', authMiddleware, authenticateTokenMiddleware, async (req, res) => {
+    console.log('i was hit')
+    validateData(req.body, res)
+    var {balanceForAdditionalCurrencies} = await getCurrentUserDetails(req.body, undefined, 1, undefined);
+    res.json({
+        status: "success",
+        message: "latest balance fetched successfully",
+        data: balanceForAdditionalCurrencies
+    }) 
 })
 
 module.exports = router
