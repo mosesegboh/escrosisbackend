@@ -36,7 +36,6 @@ const processBillPayment = async (data, res) => {
         currency: data.currency,
         amountDeductedFromSelectedCurrencyBalance: data.amountDeductedFromSelectedCurrencyBalance,
         transactionCurrency: data.transactionCurrency,
-
         shouldCharge: data.shouldCharge,
         transactionFeesAmountDetails: data.transactionFeesAmountDetails,
         originalAmount: data.originalAmount,

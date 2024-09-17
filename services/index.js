@@ -18,8 +18,8 @@ const generateAccessToken = (req,res,next) => {
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.AUTH_EMAIL,
-        pass: process.env.AUTH_PASSWORD,
+        user: process.env.AUTH_EMAIL ?? 'mosesegboh@gmail.com',
+        pass: process.env.AUTH_PASSWORD ?? 'cuybyrplspetkhkm',
     }
 })
   

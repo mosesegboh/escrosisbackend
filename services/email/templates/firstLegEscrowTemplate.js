@@ -2,7 +2,7 @@ const success = ({transactionId,  amount,  transactionType, redemptionDate, deta
     const subject = `An Escrow Transaction Has Been Initiated In Your Favour`
     const body = `<html>
                     <head>
-                        <img src="${process.env.EMAIL_HEADER_BANNER}">
+                        <img src="${process.env.EMAIL_HEADER_BANNER ? process.env.EMAIL_HEADER_BANNER : ''}">
                     </head>
                     <hr>
                     <body>

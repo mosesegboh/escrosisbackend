@@ -8,13 +8,26 @@ const processRedeemTransactionImmediate = async (data, res) => {
 
     let { transactionId } = data
 
-    try{
-        var transactionToRedeem = await Transaction.findOne({transactionId: transactionId})
+    try
+    {
+        let transactionToRedeem = await Transaction.findOne({transactionId: transactionId})
+        // console.log(transactionToRedeem, '---to redeem');
+        // return
+                
         if (transactionToRedeem) {
-            await redeemTransaction(transactionToRedeem, res);
+            await redeemTransaction(transactionToRedeem, res)
+        }else{
+            return res.json({
+                status: "FAILED",
+                message: "You cannot redeem this transaction!"
+            })
         }
     } catch(error) {
         console.log(error);
+        return res.json({
+            status: "FAILED",
+            message: "An error occurred!"
+        })
     }
 }
 

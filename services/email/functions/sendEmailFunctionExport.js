@@ -3,8 +3,8 @@ const nodemailer = require('nodemailer')
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.AUTH_EMAIL,
-        pass: process.env.AUTH_PASSWORD,
+        user: process.env.AUTH_EMAIL ?? 'mosesegboh@gmail.com',
+        pass: process.env.AUTH_PASSWORD ?? 'cuybyrplspetkhkm',
     }
 })
   
@@ -52,10 +52,15 @@ const sendEmailFunction  = async (
         await transporter.sendMail(mailOPtions)
     } catch (error) {
         console.log(error.message, 'error from mail')
-        return res.json({
+        const response = {
             status: "FAILED",
             message: error.message,
-        })
+        };
+        return res ? res.json(response) : response;
+        // return res.json({
+        //     status: "FAILED",
+        //     message: error.message,
+        // })
     }
 }
 

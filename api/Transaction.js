@@ -185,8 +185,10 @@ router.post('/test-api', (req, res) => {
 })
 
 router.get('/get-transaction-fees', (req, res) => {
+    console.log()
 
-    if (req.query.module === 'wallet') {
+    if (req.query.module == 'wallet') {
+        // console.log('i was hit 1')
         return res.json({
             "status": "success",
             "message": "Transaction fees fetch successful",
@@ -219,7 +221,8 @@ router.get('/get-transaction-fees', (req, res) => {
         })
     }
 
-    if (req.query.module = 'billpayment') {
+    if (req.query.module == 'billpayment') {
+        // console.log('i was hit 2')
         return res.json({
             "status": "success",
             "message": "Transaction fees fetch successful",
@@ -247,6 +250,70 @@ router.get('/get-transaction-fees', (req, res) => {
                         }
 
                     },
+                }
+        })
+    }
+
+    if (req.query.module == 'escrow') {
+        // console.log('i was hit 3')
+        return res.json({
+            "status": "success",
+            "message": "Transaction fees fetch successful",
+            "data":
+                {
+                   
+                    name: 'escrow',
+                    charge: true,
+                    fees: {
+                        flutterwave: {
+                            charge_percent: process.env.FLUTTERWAVE_TRANSACTION_FEE_PERCENT,
+                            charge_flat: null,
+                            shouldCharge: true
+                        },
+                        transaction: {
+                            charge_percent: process.env.APP_TRANSACTION_FEE_PERCENT,
+                            charge_flat: null,
+                            shouldCharge: true
+                        },
+                        service: {
+                            charge_percent: process.env.APP_SERVICE_FEE_PERCENT,
+                            charge_flat: null,
+                            shouldCharge: false
+                        }
+                    }
+                    
+                }
+        })
+    }
+
+    if (req.query.module == 'transfer') {
+        // console.log('i was hit 3')
+        return res.json({
+            "status": "success",
+            "message": "Transaction fees fetch successful",
+            "data":
+                {
+                   
+                    name: 'transfer',
+                    charge: true,
+                    fees: {
+                        flutterwave: {
+                            charge_percent: process.env.FLUTTERWAVE_TRANSACTION_FEE_PERCENT,
+                            charge_flat: null,
+                            shouldCharge: true
+                        },
+                        transaction: {
+                            charge_percent: process.env.APP_TRANSACTION_FEE_PERCENT,
+                            charge_flat: null,
+                            shouldCharge: true
+                        },
+                        service: {
+                            charge_percent: process.env.APP_SERVICE_FEE_PERCENT,
+                            charge_flat: null,
+                            shouldCharge: false
+                        }
+                    }
+                    
                 }
         })
     }

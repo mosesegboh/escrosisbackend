@@ -1,11 +1,11 @@
-const success = ({transactionId,  amount,  status, transactionDate, transactionCurrency, details}) => {
+const success = ({transactionId,  amount,  status, redemptionDate, transactionCurrency, details}) => {
         
     const subject = `Your Escrow Transaction Has Now Been Redeemed`
 
     const body = `<html>
         <head>
             <img
-                src="${process.env.EMAIL_HEADER_BANNER}" 
+                src="${process.env.EMAIL_HEADER_BANNER ?? 'https://www.mozetty.com/wp-content/uploads/2018/02/mozetty_com-1.jpg'}" 
                 alt="escrosis_logo"
             >
         </head>
@@ -17,18 +17,18 @@ const success = ({transactionId,  amount,  status, transactionDate, transactionC
             <p><b>Transaction ID: ${transactionId}</b></p>
             <p><b>Amount: ${amount}</b></p>
             <p><b>Transaction Currency: ${transactionCurrency}</b></p>
-            <p><b>Transaction Redemption Date: ${transactionDate}</b></p>
+            <p><b>Transaction Redemption Date: ${redemptionDate}</b></p>
             <p><b>Transaction Status: ${status}</b></p>
             <p><b>Details: ${details}</b></p>
-            <p><b>Kindly download and install our app on: ${process.env.GOOGLE_PLAYSTORE_URL}</b></p>
+            <p><b>Kindly download and install our app on: ${process.env.GOOGLE_PLAYSTORE_URL ?? 'https://play.google.com/store/games'}</b></p>
             <p>Thank you for trusting us, your transaction is in safe hands.</p>
             <p>Warm Regards</p>
         </body>
         <hr>
         <footer>
-            <p><a href="www.escrosispayments.com">www.escrosispayments.com</a></p>
+            <p><a href="https://www.escrosispayments.com">www.escrosispayments.com</a></p>
             <img
-                src="${process.env.EMAIL_FOOTER_BANNER}" 
+                src="${process.env.EMAIL_FOOTER_BANNER ?? 'https://www.mozetty.com/wp-content/uploads/2018/02/mozetty_com-1.jpg'}" 
                 alt="escrosis_logo"
             >
         </footer>
@@ -45,7 +45,7 @@ const failed = ({transactionId,  amount,  status, transactionDate, transactionCu
     const body = `<html>
             <head>
                 <img
-                    src="${process.env.EMAIL_HEADER_BANNER}" 
+                    src="${process.env.EMAIL_HEADER_BANNER ?? 'https://www.mozetty.com/wp-content/uploads/2018/02/mozetty_com-1.jpg'}" 
                     alt="escrosis_logo"
                 >
             </head>
@@ -60,15 +60,15 @@ const failed = ({transactionId,  amount,  status, transactionDate, transactionCu
                 <p><b>Transaction Redemption Date: ${transactionDate}</b></p>
                 <p><b> Transaction Status: ${status}</b></p>
                 <p><b> Details: ${details}</b></p>
-                <p><b> Kindly download and install our app on: ${process.env.GOOGLE_PLAYSTORE_URL}</b></p>
+                <p><b> Kindly download and install our app on: ${process.env.GOOGLE_PLAYSTORE_URL ?? 'https://www.mozetty.com/wp-content/uploads/2018/02/mozetty_com-1.jpg'}</b></p>
                 <p>Thank you for trusting us, your transaction is in safe hands.</p>
                 <p>Warm Regards</p>
             </body>
             <hr>
             <footer>
-                <p><a href="www.escrosispayments.com">www.escrosispayments.com</a></p>
+                <p><a href="https://www.escrosispayments.com">www.escrosispayments.com</a></p>
                 <img
-                    src="${process.env.EMAIL_FOOTER_BANNER}" 
+                    src="${process.env.EMAIL_FOOTER_BANNER ?? 'https://www.mozetty.com/wp-content/uploads/2018/02/mozetty_com-1.jpg'}" 
                     alt="escrosis_logo"
                 >
             </footer>

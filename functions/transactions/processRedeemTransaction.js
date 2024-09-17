@@ -2,7 +2,7 @@ const Transaction = require('../../models/Transaction')
 const validation = require('../validation/validateData')
 const {redeemTransaction} = require('../process')
 
-const processRedeemTransactionImmediate = async (data, res) => {
+const processRedeemTransaction = async (data, res) => {
 
     validation.validateData(data, res)
 

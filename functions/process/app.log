@@ -4692,3 +4692,20 @@
     "reference": null
   }
 }
+2024-08-04T10:31:32.603Z - {
+  "event": "singlebillpayment.status",
+  "event.type": "SingleBillPayment",
+  "data": {
+    "customer": "+2347030163523",
+    "amount": 100,
+    "network": "MTN",
+    "tx_ref": "CF-FLYAPI-20240804103126059352541",
+    "flw_ref": "BPUSSD1722767488377292",
+    "batch_reference": null,
+    "customer_reference": "XN4PAHXFOT",
+    "status": "success",
+    "message": "Bill Payment was completed successfully",
+    "reference": null
+  }
+}
+2024-09-06T07:52:04.356Z - []
